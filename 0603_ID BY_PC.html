@@ -193,7 +193,7 @@
     .scroll-section {
       position: relative;
       padding-top: 0vh;
-      border: 1px solid rgb(0, 4, 255);
+      /* border: 1px solid rgb(255, 0, 0); */
     }
 
     #scroll-section-0 h1 {
@@ -214,6 +214,7 @@
     }
 
     #scroll-section-6 {
+      padding-top: 0vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -458,7 +459,7 @@
     }
 
     .sticky-elem {
-      display: none;
+      display: none !important;
       position: fixed;
       left: 0;
       width: 100%;
@@ -472,14 +473,13 @@
     #show-scene-5 #scroll-section-5 .sticky-elem,
     #show-scene-6 #scroll-section-6 .sticky-elem,
     #show-scene-7 #scroll-section-7 .sticky-elem {
-      display: block;
+      display: block !important;
       will-change: opacity;
     }
 
     .scroll-effect-end .sticky-elem {
       /* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
       display: none !important;
-      opacity: 0 !important;
     }
 
     .sticky-elem-canvas {
@@ -493,9 +493,6 @@
       left: 50%;
     }
 
-    /* .image-blend-canvas {
-  background-color: khaki;
-} */
     .image-blend-canvas.sticky {
       position: fixed;
       top: 0;
@@ -664,6 +661,7 @@
       background-color: rgb(255, 255, 255);
       border-width: 0px 0px 0px;
       border-style: solid;
+      /* border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(255, 255, 255); */
       border-image: initial;
       border-radius: 10px;
       margin: 0px 5px;
@@ -734,9 +732,6 @@
       <div class="sticky-elem main-message i">
         <p>4444444</p>
       </div>
-      <!-- <div class="sticky-elem main-message j">
-				<p>5555555</p>
-			</div> -->
     </section>
 
     <section class="scroll-section" id="scroll-section-2">
@@ -805,40 +800,40 @@
         </div>
       </div>
 
-      <div class="colour-pallet" style="display: flex; justify-content: center;">
+      <div class="colour-pallet" style="display: flex; justify-content: center; width: 500px;">
         <div>
           <button id="A"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             A </button>
         </div>
         <div>
           <button id="B"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             B </button>
         </div>
         <div>
           <button id="C"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             C </button>
         </div>
         <div>
           <button id="D"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             D </button>
         </div>
         <div>
           <button id="E"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             E </button>
         </div>
         <div>
           <button id="F"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             F </button>
         </div>
         <div>
           <button id="G"
-            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            style="width: 100px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
             G </button>
         </div>
 
@@ -850,59 +845,60 @@
         <!--색10개-->
         <div class="pretest" style="margin-top: 10px; display: flex; justify-content: center;">
           <div><button type="button" class="btn-red" id="colour1"
-              style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 50%; display:none;">
+              style="width: 50px; height: 50px; background-color: white; border: 1px solid #ddd; border-radius: 50%; display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour2"
-              style="width: 40px; height: 40px; background-color: gray; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: gray; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour3"
-              style="width: 40px; height: 40px; background-color: black; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: black; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour4"
-              style="width: 40px; height: 40px; background-color: red; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: red; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour5"
-              style="width: 40px; height: 40px; background-color: orange; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: orange; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
         </div>
         <div class="pretest" style="margin-top: 10px; display: flex; justify-content: center">
           <div><button type="button" class="btn-red" id="colour6"
-              style="width: 40px; height: 40px; background-color: yellow; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: yellow; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour7"
-              style="width: 40px; height: 40px; background-color: green; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: green; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour8"
-              style="width: 40px; height: 40px; background-color: blue; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: blue; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour9"
-              style="width: 40px; height: 40px; background-color: navy; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: navy; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
           <div><button type="button" class="btn-red" id="colour10"
-              style="width: 40px; height: 40px; background-color: purple; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+              style="width: 50px; height: 50px; background-color: purple; border: 1px solid #ddd; border-radius: 50%;  display:none;">
             </button>
 
           </div>
         </div>
 
+        <!-- 파일 선택 -->
         <div class="logo-button">
           <label class="input-file-button" for="input-file">
             로고 넣어보기
@@ -935,15 +931,16 @@
     </section>
 
     <section class="normal-content">
-      <img class="img3" src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/id-by-detail.jpg">
+      <img class="img3" src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/id-by-detail1.jpg">
     </section>
 
   </div>
 
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       document.body.classList.add('scroll-effect-end');
     });
+
 
     document.getElementById('vid').play();
 
@@ -1670,6 +1667,7 @@
       let rafId;
       let rafState;
 
+
       const sceneInfo = [
         {
           //0
@@ -1690,8 +1688,8 @@
           values: {
             videoImageCount: 37,
             imageSequence: [0, 36],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
-            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.99 }],
+            canvas_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            canvas_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
             messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             messageA_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
             messageB_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
@@ -1701,7 +1699,7 @@
             messageD_opacity_in: [0, 1, { start: 0.55, end: 0.6 }],
             messageD_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
             messageE_opacity_in: [0, 1, { start: 0.55, end: 0.6 }],
-            messageE_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
+            messageE_opacity_out: [1, 0, { start: 0.8, end: 0.9 }]
 
           }
         },
@@ -1716,7 +1714,6 @@
             messageG: document.querySelector('#scroll-section-1 .main-message.g'),
             messageH: document.querySelector('#scroll-section-1 .main-message.h'),
             messageI: document.querySelector('#scroll-section-1 .main-message.i'),
-            // messageJ: document.querySelector('#scroll-section-1 .main-message.j'),
             canvas: document.querySelector('#video-canvas-1'),
             context: document.querySelector('#video-canvas-1').getContext('2d'),
             videoImages: []
@@ -1734,8 +1731,6 @@
             messageH_opacity_out: [1, 0, { start: 0.6, end: 0.6 }],
             messageI_opacity_in: [0, 1, { start: 0.8, end: 0.8 }],
             messageI_opacity_out: [1, 0, { start: 0.95, end: 0.95 }]
-            // messageJ_opacity_in: [0, 1, {start: 0.9, end: 0.9}],
-            // messageJ_opacity_out: [1, 0, {start: 0.95, end: 0.95}]
           }
         },
         {
@@ -1755,9 +1750,7 @@
           objs: {
             container: document.querySelector('#scroll-section-3'),
             messageK: document.querySelector('#scroll-section-3 .main-message.k'),
-            // messageL: document.querySelector('#scroll-section-3 .main-message.l'),
             messageM: document.querySelector('#scroll-section-3 .desc-message.k'),
-            // messageN: document.querySelector('#scroll-section-3 .desc-message.l'),
             canvas: document.querySelector('#video-canvas-2'),
             context: document.querySelector('#video-canvas-2').getContext('2d'),
             videoImages: []
@@ -1766,11 +1759,11 @@
             videoImageCount: 36,
             imageSequence: [0, 35],
             canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
-            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
-            messageK_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-            messageK_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
-            messageM_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-            messageM_opacity_out: [1, 0, { start: 0.7, end: 0.8 }]
+            canvas_opacity_out: [1, 0, { start: 0.55, end: 0.65 }],
+            messageK_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            messageK_opacity_out: [1, 0, { start: 0.55, end: 0.65 }],
+            messageM_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            messageM_opacity_out: [1, 0, { start: 0.55, end: 0.65 }]
           }
         },
         {
@@ -1781,9 +1774,6 @@
           objs: {
             container: document.querySelector('#scroll-section-4'),
             messageO: document.querySelector('#scroll-section-4 .main-message.m'),
-            // messageP: document.querySelector('#scroll-section-4 .main-message.n'),
-            // messageQ: document.querySelector('#scroll-section-4 .desc-message.m'),
-            // messageR: document.querySelector('#scroll-section-4 .desc-message.n'),
             canvas: document.querySelector('#video-canvas-3'),
             context: document.querySelector('#video-canvas-3').getContext('2d'),
             videoImages: []
@@ -1792,9 +1782,9 @@
             videoImageCount: 50,
             imageSequence: [0, 49],
             canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
-            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
-            messageO_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-            messageO_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
+            canvas_opacity_out: [1, 0, { start: 0.65, end: 0.75 }],
+            messageO_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            messageO_opacity_out: [1, 0, { start: 0.65, end: 0.75 }],
           }
         },
         {
@@ -1840,8 +1830,6 @@
             container: document.querySelector('#scroll-section-7'),
             messageS: document.querySelector('#scroll-section-7 .main-message.o'),
             messageT: document.querySelector('#scroll-section-7 .main-message.p'),
-            // messageU: document.querySelector('#scroll-section-7 .main-message.q'),
-            // messageV: document.querySelector('#scroll-section-7 .main-message.r'),
             canvas: document.querySelector('#video-canvas-4'),
             context: document.querySelector('#video-canvas-4').getContext('2d'),
             videoImages: []
@@ -1854,13 +1842,7 @@
             messageS_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             messageS_opacity_out: [1, 0, { start: 0.45, end: 0.54 }],
             messageT_opacity_in: [0, 1, { start: 0.55, end: 0.65 }],
-            messageT_opacity_out: [1, 0, { start: 0.9, end: 0.99 }],
-            // messageH_opacity_in: [0, 1, {start: 0.5, end: 0.5}],
-            // messageH_opacity_out: [1, 0, {start: 0.6, end: 0.6}],
-            // messageI_opacity_in: [0, 1, {start: 0.7, end: 0.7}],
-            // messageI_opacity_out: [1, 0, {start: 0.8, end: 0.8}],
-            // messageJ_opacity_in: [0, 1, {start: 0.9, end: 0.9}],
-            // messageJ_opacity_out: [1, 0, {start: 0.95, end: 0.95}]
+            messageT_opacity_out: [1, 0, { start: 0.9, end: 0.99 }]
           }
         }
       ];
@@ -1963,14 +1945,13 @@
       function playAnimation() {
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;
-        const currentYOffset = yOffset - prevScrollHeight;
+        const currentYOffset = parseInt(yOffset - prevScrollHeight);
         const scrollHeight = sceneInfo[currentScene].scrollHeight;
         const scrollRatio = currentYOffset / scrollHeight;
 
-        console.log(currentScene);
+        // console.log(currentScene);
         switch (currentScene) {
           case 0:
-            // console.log('0 paly');
             let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
             objs.context.drawImage(objs.videoImages[sequence], 0, 0);
 
@@ -1982,7 +1963,7 @@
             objs.messageC.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
             objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
 
-            if (scrollRatio <= 0.5) {
+            if (scrollRatio <= 0.7) {
               //in
               objs.messageD.style.opacity = calcValues(values.messageD_opacity_in, currentYOffset);
               objs.messageE.style.opacity = calcValues(values.messageE_opacity_in, currentYOffset);
@@ -1997,7 +1978,6 @@
             break;
 
           case 1:
-            // console.log('1 paly');
             let sequence2 = Math.round(calcValues(values.imageSequence, currentYOffset));
             objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
 
@@ -2035,13 +2015,6 @@
               //out
               objs.messageI.style.opacity = calcValues(values.messageI_opacity_out, currentYOffset);
             }
-            // if (scrollRatio <= 0.92) {
-            //   //in
-            //   objs.messageJ.style.opacity = calcValues(values.messageJ_opacity_in, currentYOffset);
-            // } else {
-            //   //out
-            //   objs.messageJ.style.opacity = calcValues(values.messageJ_opacity_out, currentYOffset);
-            // }
             break;
 
           case 2:
@@ -2269,6 +2242,14 @@
           }
         }
 
+        // 일부 기기에서 페이지 끝으로 고속 이동하면 body id가 제대로 인식 안되는 경우를 해결
+        // 페이지 맨 위로 갈 경우: scrollLoop와 첫 scene의 기본 캔버스 그리기 수행
+        if (window.pageYOffset == 0) {
+          scrollLoop();
+          sceneInfo[0].objs.canvas.style.opacity = 1;
+          sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
+        }
+
         rafId = requestAnimationFrame(loop);
 
         if (Math.abs(yOffset - delayedYOffset) < 1) {
@@ -2277,6 +2258,8 @@
         }
       }
 
+
+
       window.addEventListener('load', () => {
         setLayout();
         sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
@@ -2284,17 +2267,20 @@
         window.addEventListener('scroll', () => {
           yOffset = window.pageYOffset;
           scrollLoop();
-        });
 
-        // window.addEventListener('resize', () => {
-        //   if (window.innerWidth > 900) {
-        //     window.location.reload();
-        //     // setLayout();
-        //     // sceneInfo[3].values.rectStartY = 0;
-        //   }
-        //  });
-        //  window.addEventListener('orientationchange', setLAyout);
+          if (!rafState) {
+            rafId = requestAnimationFrame(loop);
+            rafState = true;
+          }
+        });
       });
+
+      // window.addEventListener('resize', () => {
+      //   if (window.innerWidth > 1367) {
+      //     window.location.reload();
+      //   }
+      // });
+      // window.addEventListener('orientationchange', setLayout);
       setCanvasImages();
     })();
 
