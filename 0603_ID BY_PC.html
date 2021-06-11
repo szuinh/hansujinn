@@ -1,507 +1,690 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-      <!--@css(/css/font.css)-->
-	<meta charset="UTF-8">
+  <!--@css(/css/font.css)-->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>ID BY</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ID BY</title>
   <style>
     @charset 'utf-8';
 
-html {
-	line-height: 1.2;
-	word-wrap: break-word;
-}
-body {
-	-webkit-font-smoothing: antialiased;
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
-	box-sizing: border-box;
-}
-ol, ul, li {
-	list-style: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
-}
-button {
-	border: 0;
-	background: transparent;
-	cursor: pointer;
-}
-html {
-	font-size: 14px;
-}
-body {
-	overflow-x: hidden;
-	color: rgb(29, 29, 31);
-	letter-spacing: -0.05em;
-	background: white;
-}
-p {
-	line-height: 1.6;
-  text-align: center;
-}
-a {
-	color: rgb(29, 29, 31);
-	text-decoration: none;
-}
-.container {
-	/* iPhone 가로 스크롤 방지 */
-	overflow-x: hidden;
-  text-align: center;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.scroll-section {
-	position: relative;
-	padding-top: 50vh;
-  /* border: 1px solid rgb(0, 255, 21); */
-}
-#scroll-section-0 h1 {
-	position: relative;
-	top: -10vh;
-	z-index: 5;
-	font-size: 4rem;
-	text-align: center;
-}
-#scroll-section-2 {
-  padding-top: 80vh;
-}
-#scroll-section-3 {
-  padding-top: 0vh;
-}
-#scroll-section-6 {
-	display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#scroll-section-7 {
-  padding-top: 5vh;
-}
-.normal-text {
-  font-weight: bold;
-	text-align: center;
-	line-height: 1.2;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem !important; 
-  letter-spacing: -3px;
-}
-.main-message.a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 45vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 2.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.b {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 10vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 2.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.c {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 15vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.f,
-.main-message.g {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  top: 25vh;
-  left: -30vw;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.h {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  top: 35vh;
-  left: 15vw;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.i {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  top: 35vh;
-  left: 15vw;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-  color: white;
-}
-.main-message.j {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 25vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 2.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.o {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  top: 30vh;
-  left: -20vw;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.p {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  bottom: 30vh;
-  left: 20vw !important;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 1.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.k {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 20vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 2.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message.m {
-  display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 10vh;
-	margin: 5px 0;
-	height: 3em;
-	font-size: 2.5rem;
-	opacity: 0;
-  letter-spacing: -3px;
-}
-.main-message p {
-	font-weight: bold;
-	text-align: center;
-	line-height: 1.2;
-}
-.main-message small {
-	display: block;
-	margin-bottom: 0.5em;
-	font-size: 1.2rem;
-}
-.description {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 1rem;
-	font-size: 0.8rem;
-  font-weight: bold;
-  color: #4c4c4c;
-  letter-spacing: -1px;
-}
-.sticky-elem.desc-message.a {
-  text-align: center;
-	font-weight: bold;
-  bottom: 15vh;
-	opacity: 0;
-  font-size: 0.8rem;
-  letter-spacing: -1px;
-}
-.sticky-elem.desc-message.b {
-  text-align: center;
-	font-weight: bold;
-  bottom: 10vh;
-	opacity: 0;
-  color: #4c4c4c;
-  font-size: 0.8rem;
-  letter-spacing: -1px;
-}
-.sticky-elem.desc-message.c {
-  text-align: center;
-	font-weight: bold;
-  bottom: 15vh;
-	opacity: 0;
-  color: #4c4c4c;
-  font-size: 0.8rem;
-  letter-spacing: -1px;
-}
-.sticky-elem.desc-message.k {
-  text-align: center;
-	font-weight: bold;
-  bottom: 15vh;
-	opacity: 0;
-  color: #4c4c4c;
-  font-size: 0.8rem;
-  letter-spacing: -1px;
-}
-.sticky-elem.desc-message p {
-  text-align: center;
-}
+    html {
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
 
-.mid-message {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 1rem;
-	font-size: 2rem;
-	color: #888;
-}
-.mid-message strong {
-	color: rgb(29, 29, 31);
-}
-.canvas-caption {
-	max-width: 1000px;
-	margin: -10rem auto 0;
-  /* margin: -24rem auto 0; */
-	padding: 0 1rem;
-	font-size: 1rem;
-}
-.sticky-elem {
-	display: none;
-	position: fixed;
-	left: 0;
-	width: 100%;
-}
-#show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1 .sticky-elem,
-#show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-3 #scroll-section-3 .sticky-elem, 
-#show-scene-4 #scroll-section-4 .sticky-elem, 
-#show-scene-5 #scroll-section-5 .sticky-elem, 
-#show-scene-6 #scroll-section-6 .sticky-elem,
-#show-scene-7 #scroll-section-7 .sticky-elem  {
-	display: block;
-}
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
 
-.scroll-effect-end .sticky-elem {
-	/* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
-	display: none !important;
-}
-.sticky-elem-canvas {
-	top: 0;
-	height: 100%;
-}
-.sticky-elem-canvas canvas {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-}
-/* .image-blend-canvas {
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    div,
+    span,
+    article,
+    section,
+    header,
+    footer,
+    aside,
+    p,
+    ul,
+    li,
+    fieldset,
+    legend,
+    label,
+    a,
+    nav,
+    form {
+      box-sizing: border-box;
+    }
+
+    ol,
+    ul,
+    li {
+      list-style: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+    }
+
+    button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      overflow-x: hidden;
+      color: rgb(29, 29, 31);
+      letter-spacing: -0.05em;
+      background: white;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    a {
+      color: rgb(29, 29, 31);
+      text-decoration: none;
+    }
+
+    .container {
+      /* iPhone 가로 스크롤 방지 */
+      overflow-x: hidden;
+      text-align: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .scroll-section {
+      position: relative;
+      padding-top: 0vh;
+      border: 1px solid rgb(0, 4, 255);
+    }
+
+    #scroll-section-0 h1 {
+      position: relative;
+      top: -10vh;
+      z-index: 5;
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    #scroll-section-2 {
+      padding-top: 80vh;
+    }
+
+    #scroll-section-3,
+    #scroll-section-5 {
+      padding-top: 0vh;
+    }
+
+    #scroll-section-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #scroll-section-7 {
+      padding-top: 5vh;
+    }
+
+    .normal-text {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem !important;
+      letter-spacing: -3px;
+    }
+
+    .main-message.a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 45vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 2.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.b {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 10vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 2.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.c {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 15vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.f,
+    .main-message.g {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 25vh;
+      left: -30vw;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.h {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 35vh;
+      left: 15vw;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 35vh;
+      left: 15vw;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+      color: white;
+    }
+
+    .main-message.j {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 25vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 2.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.o {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 30vh;
+      left: -20vw;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 30vh;
+      left: 20vw !important;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 1.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.k {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 20vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 2.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message.m {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 10vh;
+      margin: 5px 0;
+      height: 3em;
+      font-size: 2.5rem;
+      opacity: 0;
+      letter-spacing: -3px;
+    }
+
+    .main-message p {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .main-message small {
+      display: block;
+      margin-bottom: 0.5em;
+      font-size: 1.2rem;
+    }
+
+    .description {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #4c4c4c;
+      letter-spacing: -1px;
+    }
+
+    .sticky-elem.desc-message.a {
+      text-align: center;
+      font-weight: bold;
+      bottom: 15vh;
+      opacity: 0;
+      font-size: 0.8rem;
+      letter-spacing: -1px;
+    }
+
+    .sticky-elem.desc-message.b {
+      text-align: center;
+      font-weight: bold;
+      bottom: 10vh;
+      opacity: 0;
+      color: #4c4c4c;
+      font-size: 0.8rem;
+      letter-spacing: -1px;
+    }
+
+    .sticky-elem.desc-message.c {
+      text-align: center;
+      font-weight: bold;
+      bottom: 15vh;
+      opacity: 0;
+      color: #4c4c4c;
+      font-size: 0.8rem;
+      letter-spacing: -1px;
+    }
+
+    .sticky-elem.desc-message.k {
+      text-align: center;
+      font-weight: bold;
+      bottom: 15vh;
+      opacity: 0;
+      color: #4c4c4c;
+      font-size: 0.8rem;
+      letter-spacing: -1px;
+    }
+
+    .sticky-elem.desc-message p {
+      text-align: center;
+    }
+
+    .mid-message {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      font-size: 2rem;
+      color: #888;
+    }
+
+    .mid-message strong {
+      color: rgb(29, 29, 31);
+    }
+
+    .canvas-caption {
+      max-width: 1000px;
+      margin: -10rem auto 0;
+      /* margin: -24rem auto 0; */
+      padding: 0 1rem;
+      font-size: 1rem;
+    }
+
+    .sticky-elem {
+      display: none;
+      position: fixed;
+      left: 0;
+      width: 100%;
+    }
+
+    #show-scene-0 #scroll-section-0 .sticky-elem,
+    #show-scene-1 #scroll-section-1 .sticky-elem,
+    #show-scene-2 #scroll-section-2 .sticky-elem,
+    #show-scene-3 #scroll-section-3 .sticky-elem,
+    #show-scene-4 #scroll-section-4 .sticky-elem,
+    #show-scene-5 #scroll-section-5 .sticky-elem,
+    #show-scene-6 #scroll-section-6 .sticky-elem,
+    #show-scene-7 #scroll-section-7 .sticky-elem {
+      display: block;
+      will-change: opacity;
+    }
+
+    .scroll-effect-end .sticky-elem {
+      /* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .sticky-elem-canvas {
+      top: 0;
+      height: 100%;
+    }
+
+    .sticky-elem-canvas canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    /* .image-blend-canvas {
   background-color: khaki;
 } */
-.image-blend-canvas.sticky {
-	position: fixed;
-	top: 0;
-	z-index: 10;
-}
-.normal-content {
-	margin-bottom: 10rem;
-  margin-top: 70vh;
-}
-.txt_gradient_01 { /*왼쪽에서 오른쪽으로*/
-background: -webkit-linear-gradient(left, #ac0000, #c7ba00 , #00ad17, #003fc7, #9601aa);
--webkit-text-fill-color: transparent;
--webkit-background-clip: text;
-color : #FF0000;
-}
+    .image-blend-canvas.sticky {
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
 
-#Preview {
-  /* float: left; */
-  position: relative;
-  width: 401px;
-  height: 400px;
-  margin: 0 auto;
-}
-#option0,
-#option,
-#option1,
-#option2,
-#option3,
-#option4,
-#option5,
-#option6,
-#option7,
-#option8 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 400px;
-  width: auto !important;
-  transform: translateX(-50%);
-}
-#logo {
-  position: absolute;
-  width: auto !important;   
-  top: 50%;
-  left: 50%;
-  height: 23%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-.logoposition {
-  position: absolute;
-  width: 214px;
-  height: 130px;
-  display: block;
-}
-.nav {
-  text-align: left;
-  border-bottom: 1px solid #dee2e6;
-  /* height: 354px; */
-  margin-left: 40%;
-  padding-bottom: 5px;
-  }
-.nav li {
-  list-style-type: none;
-  /* float: left; */
-  display: inline !important;
-  padding: 8px 16px;
-  border: 1px solid #dee2e6;
-  margin-bottom: -1px;
-  border-top-right-radius: .25rem;
-  border-top-left-radius: .25rem;
-  z-index: 5;
-  }
-.nav :first-child {
-  border-bottom: 5px solid #ffffff;
-}
-.precolour {
-  display: inline-block;
-  height: 300px;
-}
-.pretest,
-.pretest1,
-.pretest2,
-.pretest3,
-.pretest4,
-.pretest5 {
-  display: inline-block;
-  z-index: 10 !important;
-}
-.pretest div,
-.pretest1 div,
-.pretest2 div,
-.pretest3 div,
-.pretest4 div,
-.pretest5 div {
-  margin: 0 1vh 1vh 1vh;
-  display: inline-block;
-}
-#colour1 p,
-#colour2 p,
-#colour3 p,
-#colour4 p,
-#colour5 p,
-#colour6 p,
-#colour7 p,
-#colour8 p,
-#colour9 p,
-#colour10 p {
-  text-align: center;
-}
+    .normal-content {
+      margin-bottom: 10rem;
+      margin-top: 70vh;
+    }
 
-#colour1,
-#colour2,
-#colour3,
-#colour4,
-#colour5,
-#colour6,
-#colour7,
-#colour8,
-#colour9,
-#colour10 {
-  width: 40px;
-  height: 40px;
-}
-.input-file-button{
-  /* position: absolute; */
-  top: 0;
-  padding: 6px 25px;
-  background-color:#2255b0;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-}
-.logo-button {
-  position: relative;
-  margin-top: 10px;
-}
-#fileInput {
-  position: absolute;
-  top: 0;
-}
-#scroll-section-5 {
-    height: 1250px;
-  }
+    .txt_gradient_01 {
+      /*왼쪽에서 오른쪽으로*/
+      background: -webkit-linear-gradient(left, #ac0000, #c7ba00, #00ad17, #003fc7, #9601aa);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      color: #FF0000;
+    }
 
+    #Preview {
+      /* float: left; */
+      position: relative;
+      width: 401px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    #option0,
+    #option,
+    #option1,
+    #option2,
+    #option3,
+    #option4,
+    #option5,
+    #option6,
+    #option7,
+    #option8 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 400px;
+      width: auto !important;
+      transform: translateX(-50%);
+    }
+
+    #logo {
+      position: absolute;
+      width: auto !important;
+      top: 50%;
+      left: 50%;
+      height: 23%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    .logoposition {
+      position: absolute;
+      width: 214px;
+      height: 130px;
+      display: block;
+    }
+
+    .nav {
+      text-align: left;
+      border-bottom: 1px solid #dee2e6;
+      /* height: 354px; */
+      margin-left: 40%;
+      padding-bottom: 5px;
+    }
+
+    .nav li {
+      list-style-type: none;
+      /* float: left; */
+      display: inline !important;
+      padding: 8px 16px;
+      border: 1px solid #dee2e6;
+      margin-bottom: -1px;
+      border-top-right-radius: .25rem;
+      border-top-left-radius: .25rem;
+      z-index: 5;
+    }
+
+    .nav :first-child {
+      border-bottom: 5px solid #ffffff;
+    }
+
+    .precolour {
+      display: inline-block;
+      height: 300px;
+    }
+
+    .pretest,
+    .pretest1,
+    .pretest2,
+    .pretest3,
+    .pretest4,
+    .pretest5 {
+      display: inline-block;
+      z-index: 10 !important;
+    }
+
+    .pretest div,
+    .pretest1 div,
+    .pretest2 div,
+    .pretest3 div,
+    .pretest4 div,
+    .pretest5 div {
+      margin: 0 1vh 1vh 1vh;
+      display: inline-block;
+    }
+
+    #colour1 p,
+    #colour2 p,
+    #colour3 p,
+    #colour4 p,
+    #colour5 p,
+    #colour6 p,
+    #colour7 p,
+    #colour8 p,
+    #colour9 p,
+    #colour10 p {
+      text-align: center;
+    }
+
+    #colour1,
+    #colour2,
+    #colour3,
+    #colour4,
+    #colour5,
+    #colour6,
+    #colour7,
+    #colour8,
+    #colour9,
+    #colour10 {
+      width: 40px;
+      height: 40px;
+    }
+
+    .input-file-button {
+      /* position: absolute; */
+      top: 0;
+      padding: 6px 25px;
+      background-color: #2255b0;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .logo-button {
+      position: relative;
+      margin-top: 10px;
+    }
+
+    #fileInput {
+      position: absolute;
+      top: 0;
+    }
+
+    #scroll-section-5 {
+      height: 1250px;
+    }
+
+    .colour-pallet>button:hover {
+      width: 40px;
+      height: 40px;
+      background-color: rgb(255, 255, 255);
+      border-width: 0px 0px 0px;
+      border-style: solid;
+      border-image: initial;
+      border-radius: 10px;
+      margin: 0px 5px;
+      color: rgb(34, 85, 176);
+    }
+
+    button:hover {
+      background-color: #000;
+    }
+
+    .btn-red button:before {
+      background-color: #ddd;
+    }
   </style>
 
 </head>
+
 <body class="scroll-effect-end">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-	<div class="container">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <div class="container">
 
     <section class="scroll-section" id="scroll-section-0">
       <div class="sticky-elem sticky-elem-canvas">
@@ -526,158 +709,339 @@ color : #FF0000;
           다양하고 직관적인 사용성을 지니고, 인체의 줄 수 있는 무리를 최소화한<br>
           ID BY를 드디어 프레임바이 공식홈페이지에서 단독으로 만날 수 있습니다.</p>
       </div>
-    
+
       <div class="sticky-elem main-message d"></div>
       <div class="sticky-elem main-message e"></div>
       <div class="sticky-elem desc-message c"></div>
       <div class="sticky-elem desc-message d"></div>
       <div class="sticky-elem desc-message e"></div>
-    
+
     </section>
 
     <section class="scroll-section" id="scroll-section-1">
-			<div class="sticky-elem sticky-elem-canvas">
-				<canvas id="video-canvas-1" width="1920" height="1080"></canvas>
-			</div>
-			<div class="sticky-elem main-message f">
-				<p>11111111</p>
-			</div>
+      <div class="sticky-elem sticky-elem-canvas">
+        <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+      </div>
+      <div class="sticky-elem main-message f">
+        <p>11111111</p>
+      </div>
       <div class="sticky-elem main-message g">
-				<p>2222222</p>
-			</div>
+        <p>2222222</p>
+      </div>
       <div class="sticky-elem main-message h">
-				<p>3333333</p>
-			</div>
+        <p>3333333</p>
+      </div>
       <div class="sticky-elem main-message i">
-				<p>4444444</p>
-			</div>
+        <p>4444444</p>
+      </div>
       <!-- <div class="sticky-elem main-message j">
 				<p>5555555</p>
 			</div> -->
-		</section>
+    </section>
 
-		<section class="scroll-section" id="scroll-section-2">
+    <section class="scroll-section" id="scroll-section-2">
       <video id="vid" width="100%" autoplay="autoplay" loop="loop" muted="muted" playsinline>
-        <source src="https://szuinh.github.io/hansujinn/Sequence%2005_2.mp4" type="video/mp4"> 
+        <source src="https://szuinh.github.io/hansujinn/Sequence%2005_5.mp4" type="video/mp4">
       </video>
       <div class="normal-text">
         단, 누르지 않으면, 절대 빠지지 않는 안전성.
       </div>
-		</section>
+    </section>
 
     <section class="scroll-section" id="scroll-section-3">
       <div class="sticky-elem sticky-elem-canvas">
-				<canvas id="video-canvas-2" width="1920" height="1080"></canvas>
-			</div>
+        <canvas id="video-canvas-2" width="1920" height="1080"></canvas>
+      </div>
       <div class="sticky-elem main-message k">
-				<p>그만큼 정교하고,<br>세밀한 자석구조.</p>
-			</div>
+        <p>그만큼 정교하고,<br>세밀한 자석구조.</p>
+      </div>
       <div class="sticky-elem desc-message k">
         <p>정교하고 세밀한 자석구조로 설계되어 보지 않고도 쉽게 붙일 수<br>
-        있으며, 버튼을 누르는 동작없이는 절대로 떨어지지 않습니다.</p>
+          있으며, 버튼을 누르는 동작없이는 절대로 떨어지지 않습니다.</p>
       </div>
       <div class="sticky-elem main-message l"></div>
       <div class="sticky-elem desc-message l"></div>
-		</section>
+    </section>
 
     <section class="scroll-section" id="scroll-section-4">
       <div class="sticky-elem sticky-elem-canvas">
-				<canvas id="video-canvas-3" width="1920" height="1080"></canvas>
-			</div>
+        <canvas id="video-canvas-3" width="1920" height="1080"></canvas>
+      </div>
       <div class="sticky-elem main-message m">
-				<p>아이디바이에 여러분의 브랜드도 담아보세요.</p>
-			</div>
+        <p>아이디바이에 여러분의 브랜드도 담아보세요.</p>
+      </div>
       <div class="sticky-elem desc-message m"></div>
 
       <div class="sticky-elem main-message n"></div>
       <div class="sticky-elem desc-message n"></div>
-		</section>
+    </section>
 
     <section class="scroll-section" id="scroll-section-5">
-      <div class="normal-text">Bespoke Option</div>
+      <div style="font-size: 30px;">Bespoke Option</div>
 
-      <section class = "pre">
-         <div id="Preview">
-          <div><img id= 'option0' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/IDBY_base2000.png"></img></div> 
-          <div><img id= 'option1' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/white.png"></img></div> 
-          <div><img id= 'option2' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/white.png"></img></div> 
-          <div class="logoposition" style="margin-left: 0px; margin-right: 0px;"><img src="" id="logo"> <!--로고 들어갈 자리--></div>
-          <div><img id= 'option3' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/white.png"></img></div>
-          <div><img id= 'option4' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/white.png"></img></div> 
-          <div><img id= 'option5' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/white.png"></img></div> 
-          <div><img id= 'option6' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/white.png"></img></div>
-          <div><img id= 'option7' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/white.png"></img></div>
-          <div><img id= 'option8' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/guide2000.png"></img></div>
-         </div>
-  
-          <ul class="nav">
-            <li id="A"><span>A</span></li>
-            <li id="B"><span>B</span></li>
-            <li id="C"><span>C</span></li>
-            <li id="D"><span>D</span></li>
-            <li id="E"><span>E</span></li>
-            <li id="F"><span>F</span></li>
-            <li id="G"><span>G</span></li>
-          </ul>
+
+      <div id="Preview">
+        <div><img id='option0' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/IDBY_base2000.png"></img>
+        </div>
+        <div><img id='option1' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/white.png"></img>
+        </div>
+        <div><img id='option2' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/white.png"></img>
+          <div class="logoposition" style="margin-left: 0px; margin-right: 0px;">
+            <img src="" id="logo">
+            <!--로고 들어갈 자리-->
+          </div>
+        </div>
+        <div><img id='option3' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/white.png"></img>
+        </div>
+        <div><img id='option4' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/white.png"></img>
+        </div>
+        <div><img id='option5' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/white.png"></img>
+        </div>
+        <div><img id='option6' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/white.png"></img>
+        </div>
+        <div><img id='option7' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/white.png"></img>
+        </div>
+        <div><img id='option8' src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/guide2000.png"></img>
+        </div>
+      </div>
+
+      <div class="colour-pallet" style="display: flex; justify-content: center;">
+        <div>
+          <button id="A"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            A </button>
+        </div>
+        <div>
+          <button id="B"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            B </button>
+        </div>
+        <div>
+          <button id="C"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            C </button>
+        </div>
+        <div>
+          <button id="D"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            D </button>
+        </div>
+        <div>
+          <button id="E"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            E </button>
+        </div>
+        <div>
+          <button id="F"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            F </button>
+        </div>
+        <div>
+          <button id="G"
+            style="width: 40px; height: 40px; background-color: #b7b7b7; border: 1px solid #ddd; border-radius: 10px; margin: 0 5px; color: #fff;">
+            G </button>
+        </div>
+
+      </div>
+
 
       <!--색상 미리보기-->
-        <div class="precolour" style="width: 350px;">
-          <!--색10개-->
-          <div class = "pretest" style="margin-top: 10px;">
-            <div id="colour1"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/white.png" width='40' height='40' style="height: 40px;"></img><p>White</p></div>
-            <div id="colour2"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/gray.png" width='40' height='40' style="height: 40px;"></img><p>Gray</p></div>
-            <div id="colour3"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/black.png" width='40' height='40' style="height: 40px;"></img><p>Black</p></div>
-            <div id="colour4"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/red.png" width='40' height='40' style="height: 40px;"></img><p>Red</p></div>
-            <div id="colour5"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/orange.png" width='40' height='40' style="height: 40px;"></img><p>Orange</p></div>
-            <div id="colour6"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/yellow.png" width='40' height='40' style="height: 40px;"></img><p>Yellow</p></div>
-            <div id="colour7"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/green.png" width='40' height='40' style="height: 40px;"></img><p>Green</p></div>
-            <div id="colour8"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/blue.png" width='40' height='40' style="height: 40px;"></img><p>Blue</p></div>
-            <div id="colour9"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/navy.png" width='40' height='40' style="height: 40px;"></img><p>Navy</p></div>
-            <div id="colour10"><img src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/color/new%20color/purple.png" width='40' height='40' style="height: 40px;"></img><p>Purple</p></div>
-          </div><br>
-        
-          <!-- 파일 선택 -->
-          <div class="logo-button">
-            <label class="input-file-button" for="input-file">
-              로고 넣어보기
-            </label>
-            <input id="fileInput" name="fileInput" type="file" class="fileInput"  accept="image/*"  value="Resize Image" style="opacity: 0;">
+      <div class="precolour" style="width: 300px;">
+        <!--색10개-->
+        <div class="pretest" style="margin-top: 10px; display: flex; justify-content: center;">
+          <div><button type="button" class="btn-red" id="colour1"
+              style="width: 40px; height: 40px; background-color: white; border: 1px solid #ddd; border-radius: 50%; display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour2"
+              style="width: 40px; height: 40px; background-color: gray; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour3"
+              style="width: 40px; height: 40px; background-color: black; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour4"
+              style="width: 40px; height: 40px; background-color: red; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour5"
+              style="width: 40px; height: 40px; background-color: orange; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+        </div>
+        <div class="pretest" style="margin-top: 10px; display: flex; justify-content: center">
+          <div><button type="button" class="btn-red" id="colour6"
+              style="width: 40px; height: 40px; background-color: yellow; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour7"
+              style="width: 40px; height: 40px; background-color: green; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour8"
+              style="width: 40px; height: 40px; background-color: blue; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour9"
+              style="width: 40px; height: 40px; background-color: navy; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
+          </div>
+          <div><button type="button" class="btn-red" id="colour10"
+              style="width: 40px; height: 40px; background-color: purple; border: 1px solid #ddd; border-radius: 50%;  display:none;">
+            </button>
+
           </div>
         </div>
 
-      </section>
-		</section>
+        <div class="logo-button">
+          <label class="input-file-button" for="input-file">
+            로고 넣어보기
+          </label>
+          <input id="fileInput" name="fileInput" type="file" class="fileInput" accept="image/*" value="Resize Image"
+            style="opacity: 0;">
+        </div>
+      </div>
+
+
+    </section>
 
     <section class="scroll-section" id="scroll-section-6">
       <canvas class="image-blend-canvas" width="1920" height="1080"></canvas>
-		</section>
+    </section>
 
     <section class="scroll-section" id="scroll-section-7">
       <div class="sticky-elem sticky-elem-canvas">
-				<canvas id="video-canvas-4" width="1920" height="1080"></canvas>
-			</div>
+        <canvas id="video-canvas-4" width="1920" height="1080"></canvas>
+      </div>
       <div class="sticky-elem main-message o">
-				<p>직관적인<br>상하<br>슬라이딩<br>으로</p>
-			</div>
+        <p>직관적인<br>상하<br>슬라이딩<br>으로</p>
+      </div>
       <div class="sticky-elem main-message p">
-				<p>자주쓰는<br>카드까지<br>수납하다</p>
-			</div>
+        <p>자주쓰는<br>카드까지<br>수납하다</p>
+      </div>
 
       <div class="sticky-elem main-message q"></div>
       <div class="sticky-elem main-message r"></div>
-		</section>
+    </section>
 
     <section class="normal-content">
-        <img class="img3" src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/id-by-detail.jpg">
-		</section>
+      <img class="img3" src="https://framebystore.cafe24.com/sujin_code_test/ID%20BY/id-by-detail.jpg">
+    </section>
 
-	</div>
-  
+  </div>
+
   <script>
+    $(document).ready(function() {
+      document.body.classList.add('scroll-effect-end');
+    });
 
     document.getElementById('vid').play();
 
-    document.getElementById('A').style.color = "#2255b0";
+    document.getElementById('A').style.color = "#ffffff";
+
+    document.getElementById('colour1').onclick = function () { colour1() };
+    function colour1() {
+      document.getElementById('option1')
+    };
+    document.getElementById('colour2').onclick = function () { colour2() };
+    function colour2() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/gray.png";
+    };
+    document.getElementById('colour3').onclick = function () { colour3() };
+    function colour3() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/black.png";
+    };
+    document.getElementById('colour4').onclick = function () { colour4() };
+    function colour4() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/red.png";
+    };
+    document.getElementById('colour5').onclick = function () { colour5() };
+    function colour5() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/orange.png";
+    };
+    document.getElementById('colour6').onclick = function () { colour6() };
+    function colour6() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/yellow.png";
+    };
+    document.getElementById('colour7').onclick = function () { colour7() };
+    function colour7() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/green.png";
+    };
+    document.getElementById('colour8').onclick = function () { colour8() };
+    function colour8() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/blue.png";
+    };
+    document.getElementById('colour9').onclick = function () { colour9() };
+    function colour9() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/navy.png";
+    };
+    document.getElementById('colour10').onclick = function () { colour10() };
+    function colour10() {
+      document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/purple.png";
+    };
+
+    // A
+    document.getElementById('A').onclick = function () { A() };
+    function A() {
+      document.getElementById('A').style.border = "5px solid #1462c1";
+      document.getElementById('A').style.background = "#0074ff";
+      document.getElementById('A').style.fontWeight = "bold";
+
+
+      document.getElementById('B').style.border = "1px solid #ddd";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+      document.getElementById('C').style.border = "1px solid #ddd";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "1px solid #ddd";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "1px solid #ddd";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "1px solid #ddd";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "1px solid #ddd";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#ffffff";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+
 
       document.getElementById('colour1').onclick = function () { colour1() };
       function colour1() {
@@ -719,433 +1083,579 @@ color : #FF0000;
       function colour10() {
         document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/purple.png";
       };
+    };
 
-      // A
-      document.getElementById('A').onclick = function () { A() };
-      function A() {
-        document.getElementById('A').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
 
-        document.getElementById('A').style.color = "#2255b0";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#000000";
 
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option1').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/A/2000px/purple.png";
-        };
+
+    // B
+    document.getElementById('B').onclick = function () { B() };
+    function B() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "5px solid #1462c1";
+      document.getElementById('B').style.background = "#0074ff";
+      document.getElementById('B').style.fontWeight = "bold";
+
+
+      document.getElementById('C').style.border = "1px solid #dee2e6";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "1px solid #dee2e6";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "1px solid #dee2e6";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "1px solid #dee2e6";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "1px solid #dee2e6";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#ffffff";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/white.png";
       };
-
-      // B
-      document.getElementById('B').onclick = function () { B() };
-      function B() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#2255b0";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#000000";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/purple.png";
-        };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/gray.png";
       };
-
-      // C
-      document.getElementById('C').onclick = function () { C() };
-      function C() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#2255b0";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#000000";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/purple.png";
-        };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/black.png";
       };
-
-      // D
-      document.getElementById('D').onclick = function () { D() };
-      function D() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#2255b0";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#000000";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/purple.png";
-        };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/red.png";
       };
-
-      // E
-      document.getElementById('E').onclick = function () { E() };
-      function E() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#2255b0";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#000000";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/purple.png";
-        };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/orange.png";
       };
-
-      // F
-      document.getElementById('F').onclick = function () { F() };
-      function F() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "5px solid #ffffff";
-        document.getElementById('G').style.borderBottom = "1px solid #dee2e6";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#2255b0";
-        document.getElementById('G').style.color = "#000000";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/purple.png";
-        };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/yellow.png";
       };
-
-      // G
-      document.getElementById('G').onclick = function () { G() };
-      function G() {
-        document.getElementById('A').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('B').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('C').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('D').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('E').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('F').style.borderBottom = "1px solid #dee2e6";
-        document.getElementById('G').style.borderBottom = "5px solid #ffffff";
-
-        document.getElementById('A').style.color = "#000000";
-        document.getElementById('B').style.color = "#000000";
-        document.getElementById('C').style.color = "#000000";
-        document.getElementById('D').style.color = "#000000";
-        document.getElementById('E').style.color = "#000000";
-        document.getElementById('F').style.color = "#000000";
-        document.getElementById('G').style.color = "#2255b0";
-
-        document.getElementById('colour1').onclick = function () { colour1() };
-        function colour1() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/white.png";
-        };
-        document.getElementById('colour2').onclick = function () { colour2() };
-        function colour2() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/gray.png";
-        };
-        document.getElementById('colour3').onclick = function () { colour3() };
-        function colour3() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/black.png";
-        };
-        document.getElementById('colour4').onclick = function () { colour4() };
-        function colour4() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/red.png";
-        };
-        document.getElementById('colour5').onclick = function () { colour5() };
-        function colour5() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/orange.png";
-        };
-        document.getElementById('colour6').onclick = function () { colour6() };
-        function colour6() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/yellow.png";
-        };
-        document.getElementById('colour7').onclick = function () { colour7() };
-        function colour7() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/green.png";
-        };
-        document.getElementById('colour8').onclick = function () { colour8() };
-        function colour8() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/blue.png";
-        };
-        document.getElementById('colour9').onclick = function () { colour9() };
-        function colour9() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/navy.png";
-        };
-        document.getElementById('colour10').onclick = function () { colour10() };
-        function colour10() {
-          document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/purple.png";
-        };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/green.png";
       };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option2').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/b/2000px/purple.png";
+      };
+    };
+
+    // C
+    document.getElementById('C').onclick = function () { C() };
+    function C() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "1px solid #dee2e6";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+
+      document.getElementById('C').style.border = "5px solid #1462c1";
+      document.getElementById('C').style.background = "#0074ff";
+      document.getElementById('C').style.fontWeight = "bold";
+
+      document.getElementById('D').style.border = "1px solid #dee2e6";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "1px solid #dee2e6";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "1px solid #dee2e6";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "1px solid #dee2e6";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#ffffff";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/white.png";
+      };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/gray.png";
+      };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/black.png";
+      };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/red.png";
+      };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/orange.png";
+      };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/yellow.png";
+      };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/green.png";
+      };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option3').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/c/2000px/purple.png";
+      };
+    };
+
+    // D
+    document.getElementById('D').onclick = function () { D() };
+    function D() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "1px solid #dee2e6";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+
+      document.getElementById('C').style.border = "1px solid #dee2e6";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "5px solid #1462c1";
+      document.getElementById('D').style.background = "#0074ff";
+      document.getElementById('D').style.fontWeight = "bold";
+
+      document.getElementById('E').style.border = "1px solid #dee2e6";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "1px solid #dee2e6";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "1px solid #dee2e6";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#ffffff";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/white.png";
+      };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/gray.png";
+      };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/black.png";
+      };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/red.png";
+      };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/orange.png";
+      };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/yellow.png";
+      };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/green.png";
+      };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option4').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/d/2000px/purple.png";
+      };
+    };
+
+    // E
+    document.getElementById('E').onclick = function () { E() };
+    function E() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "1px solid #dee2e6";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+
+      document.getElementById('C').style.border = "1px solid #dee2e6";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "1px solid #dee2e6";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "5px solid #1462c1";
+      document.getElementById('E').style.background = "#0074ff";
+      document.getElementById('E').style.fontWeight = "bold";
+
+      document.getElementById('F').style.border = "1px solid #dee2e6";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "1px solid #dee2e6";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#ffffff";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/white.png";
+      };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/gray.png";
+      };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/black.png";
+      };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/red.png";
+      };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/orange.png";
+      };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/yellow.png";
+      };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/green.png";
+      };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option5').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/e/2000px/purple.png";
+      };
+    };
+
+    // F
+    document.getElementById('F').onclick = function () { F() };
+    function F() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "1px solid #dee2e6";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+
+      document.getElementById('C').style.border = "1px solid #dee2e6";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "1px solid #dee2e6";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "1px solid #dee2e6";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "5px solid #1462c1";
+      document.getElementById('F').style.background = "#0074ff";
+      document.getElementById('F').style.fontWeight = "bold";
+
+      document.getElementById('G').style.border = "1px solid #dee2e6";
+      document.getElementById('G').style.background = "#b7b7b7";
+      document.getElementById('G').style.fontWeight = "normal";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#ffffff";
+      document.getElementById('G').style.color = "#e8e8e8";
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/white.png";
+      };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/gray.png";
+      };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/black.png";
+      };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/red.png";
+      };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/orange.png";
+      };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/yellow.png";
+      };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/green.png";
+      };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option6').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/f/2000px/purple.png";
+      };
+    };
+
+    // G
+    document.getElementById('G').onclick = function () { G() };
+    function G() {
+      document.getElementById('A').style.border = "1px solid #dee2e6";
+      document.getElementById('A').style.background = "#b7b7b7";
+      document.getElementById('A').style.fontWeight = "normal";
+
+
+      document.getElementById('B').style.border = "1px solid #dee2e6";
+      document.getElementById('B').style.background = "#b7b7b7";
+      document.getElementById('B').style.fontWeight = "normal";
+
+
+      document.getElementById('C').style.border = "1px solid #dee2e6";
+      document.getElementById('C').style.background = "#b7b7b7";
+      document.getElementById('C').style.fontWeight = "normal";
+
+      document.getElementById('D').style.border = "1px solid #dee2e6";
+      document.getElementById('D').style.background = "#b7b7b7";
+      document.getElementById('D').style.fontWeight = "normal";
+
+      document.getElementById('E').style.border = "1px solid #dee2e6";
+      document.getElementById('E').style.background = "#b7b7b7";
+      document.getElementById('E').style.fontWeight = "normal";
+
+      document.getElementById('F').style.border = "1px solid #dee2e6";
+      document.getElementById('F').style.background = "#b7b7b7";
+      document.getElementById('F').style.fontWeight = "normal";
+
+      document.getElementById('G').style.border = "5px solid #1462c1";
+      document.getElementById('G').style.background = "#0074ff";
+      document.getElementById('G').style.fontWeight = "bold";
+
+      document.getElementById('A').style.color = "#e8e8e8";
+      document.getElementById('B').style.color = "#e8e8e8";
+      document.getElementById('C').style.color = "#e8e8e8";
+      document.getElementById('D').style.color = "#e8e8e8";
+      document.getElementById('E').style.color = "#e8e8e8";
+      document.getElementById('F').style.color = "#e8e8e8";
+      document.getElementById('G').style.color = "#ffffff";
+
+
+      document.getElementById('colour1').style.display = "block";
+      document.getElementById('colour2').style.display = "block";
+      document.getElementById('colour3').style.display = "block";
+      document.getElementById('colour4').style.display = "block";
+      document.getElementById('colour5').style.display = "block";
+      document.getElementById('colour6').style.display = "block";
+      document.getElementById('colour7').style.display = "block";
+      document.getElementById('colour8').style.display = "block";
+      document.getElementById('colour9').style.display = "block";
+      document.getElementById('colour10').style.display = "block";
+
+      document.getElementById('colour1').onclick = function () { colour1() };
+      function colour1() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/white.png";
+      };
+      document.getElementById('colour2').onclick = function () { colour2() };
+      function colour2() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/gray.png";
+      };
+      document.getElementById('colour3').onclick = function () { colour3() };
+      function colour3() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/black.png";
+      };
+      document.getElementById('colour4').onclick = function () { colour4() };
+      function colour4() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/red.png";
+      };
+      document.getElementById('colour5').onclick = function () { colour5() };
+      function colour5() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/orange.png";
+      };
+      document.getElementById('colour6').onclick = function () { colour6() };
+      function colour6() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/yellow.png";
+      };
+      document.getElementById('colour7').onclick = function () { colour7() };
+      function colour7() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/green.png";
+      };
+      document.getElementById('colour8').onclick = function () { colour8() };
+      function colour8() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/blue.png";
+      };
+      document.getElementById('colour9').onclick = function () { colour9() };
+      function colour9() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/navy.png";
+      };
+      document.getElementById('colour10').onclick = function () { colour10() };
+      function colour10() {
+        document.getElementById('option7').src = "https://framebystore.cafe24.com/sujin_code_test/ID%20BY/6/g/2000px/purple.png";
+      };
+    };
 
 
 
@@ -1180,18 +1690,18 @@ color : #FF0000;
           values: {
             videoImageCount: 37,
             imageSequence: [0, 36],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1}],
-            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.99}],
-            messageA_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageA_opacity_out: [1, 0, {start: 0.8, end: 0.9}],
-            messageB_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageB_opacity_out: [1, 0, {start: 0.4, end: 0.5}],
-            messageC_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageC_opacity_out: [1, 0, {start: 0.4, end: 0.5}],
-            messageD_opacity_in: [0, 1, {start: 0.55, end: 0.6}],
-            messageD_opacity_out: [1, 0, {start: 0.8, end: 0.9}],
-            messageE_opacity_in: [0, 1, {start: 0.55, end: 0.6}],
-            messageE_opacity_out: [1, 0, {start: 0.8, end: 0.9}],
+            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.99 }],
+            messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageA_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
+            messageB_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageB_opacity_out: [1, 0, { start: 0.4, end: 0.5 }],
+            messageC_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageC_opacity_out: [1, 0, { start: 0.4, end: 0.5 }],
+            messageD_opacity_in: [0, 1, { start: 0.55, end: 0.6 }],
+            messageD_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
+            messageE_opacity_in: [0, 1, { start: 0.55, end: 0.6 }],
+            messageE_opacity_out: [1, 0, { start: 0.8, end: 0.9 }],
 
           }
         },
@@ -1212,18 +1722,18 @@ color : #FF0000;
             videoImages: []
           },
           values: {
-            videoImageCount: 170,
-            imageSequence: [0, 169],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1}],
-            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.95}],
-            messageF_opacity_in: [0, 1, {start: 0.1, end: 0.1}],
-            messageF_opacity_out: [1, 0, {start: 0.2, end: 0.2}],
-            messageG_opacity_in: [0, 1, {start: 0.3, end: 0.3}],
-            messageG_opacity_out: [1, 0, {start: 0.4, end: 0.4}],
-            messageH_opacity_in: [0, 1, {start: 0.5, end: 0.5}],
-            messageH_opacity_out: [1, 0, {start: 0.6, end: 0.6}],
-            messageI_opacity_in: [0, 1, {start: 0.8, end: 0.8}],
-            messageI_opacity_out: [1, 0, {start: 0.95, end: 0.95}]
+            videoImageCount: 180,
+            imageSequence: [0, 179],
+            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.95 }],
+            messageF_opacity_in: [0, 1, { start: 0.1, end: 0.1 }],
+            messageF_opacity_out: [1, 0, { start: 0.2, end: 0.2 }],
+            messageG_opacity_in: [0, 1, { start: 0.3, end: 0.3 }],
+            messageG_opacity_out: [1, 0, { start: 0.4, end: 0.4 }],
+            messageH_opacity_in: [0, 1, { start: 0.5, end: 0.5 }],
+            messageH_opacity_out: [1, 0, { start: 0.6, end: 0.6 }],
+            messageI_opacity_in: [0, 1, { start: 0.8, end: 0.8 }],
+            messageI_opacity_out: [1, 0, { start: 0.95, end: 0.95 }]
             // messageJ_opacity_in: [0, 1, {start: 0.9, end: 0.9}],
             // messageJ_opacity_out: [1, 0, {start: 0.95, end: 0.95}]
           }
@@ -1255,12 +1765,12 @@ color : #FF0000;
           values: {
             videoImageCount: 36,
             imageSequence: [0, 35],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1}],
-            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8}],
-            messageK_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageK_opacity_out: [1, 0, {start: 0.7, end: 0.8}],
-            messageM_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageM_opacity_out: [1, 0, {start: 0.7, end: 0.8}]
+            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
+            messageK_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageK_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
+            messageM_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageM_opacity_out: [1, 0, { start: 0.7, end: 0.8 }]
           }
         },
         {
@@ -1281,10 +1791,10 @@ color : #FF0000;
           values: {
             videoImageCount: 50,
             imageSequence: [0, 49],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1}],
-            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8}],
-            messageO_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageO_opacity_out: [1, 0, {start: 0.7, end: 0.8}],
+            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
+            messageO_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageO_opacity_out: [1, 0, { start: 0.7, end: 0.8 }],
           }
         },
         {
@@ -1314,10 +1824,10 @@ color : #FF0000;
             images: []
           },
           values: {
-            rect1X: [0, 0, {start: 0, end: 0}],
-            rect2X: [0, 0, {start: 0, end: 0}],
-            blendHeight : [0, 0, {start: 0, end: 0}],
-            blendHeight2 : [0, 0, {start: 0, end: 0}],
+            rect1X: [0, 0, { start: 0, end: 0 }],
+            rect2X: [0, 0, { start: 0, end: 0 }],
+            blendHeight: [0, 0, { start: 0, end: 0 }],
+            blendHeight2: [0, 0, { start: 0, end: 0 }],
             rectStartY: 0
           }
         },
@@ -1339,12 +1849,12 @@ color : #FF0000;
           values: {
             videoImageCount: 96,
             imageSequence: [0, 95],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1}],
-            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.99}],
-            messageS_opacity_in: [0, 1, {start: 0.1, end: 0.2}],
-            messageS_opacity_out: [1, 0, {start: 0.45, end: 0.54}],
-            messageT_opacity_in: [0, 1, {start: 0.55, end: 0.65}],
-            messageT_opacity_out: [1, 0, {start: 0.9, end: 0.99}],
+            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_out: [1, 0, { start: 0.9, end: 0.99 }],
+            messageS_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+            messageS_opacity_out: [1, 0, { start: 0.45, end: 0.54 }],
+            messageT_opacity_in: [0, 1, { start: 0.55, end: 0.65 }],
+            messageT_opacity_out: [1, 0, { start: 0.9, end: 0.99 }],
             // messageH_opacity_in: [0, 1, {start: 0.5, end: 0.5}],
             // messageH_opacity_out: [1, 0, {start: 0.6, end: 0.6}],
             // messageI_opacity_in: [0, 1, {start: 0.7, end: 0.7}],
@@ -1363,52 +1873,46 @@ color : #FF0000;
           sceneInfo[0].objs.videoImages.push(imgElem);
         }
         let imgElem2;
-          for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
-            imgElem2 = new Image();
-            imgElem2.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/2_90%25/12f/%232_12f_${1 + i}.jpg`;
-            sceneInfo[1].objs.videoImages.push(imgElem2);
-          }
+        for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
+          imgElem2 = new Image();
+          imgElem2.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/2_90%25/12f/%232_12f_${1 + i}.jpg`;
+          sceneInfo[1].objs.videoImages.push(imgElem2);
+        }
         let imgElem3;
-          for (let i = 0; i < sceneInfo[3].values.videoImageCount; i++) {
-            imgElem3 = new Image();
-            imgElem3.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/3_80%25_up/12ff/%233_12f_${1 + i}.jpg`;
-            sceneInfo[3].objs.videoImages.push(imgElem3);
-          }
+        for (let i = 0; i < sceneInfo[3].values.videoImageCount; i++) {
+          imgElem3 = new Image();
+          imgElem3.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/3_80%25_up/12ff/%233_12f_${1 + i}.jpg`;
+          sceneInfo[3].objs.videoImages.push(imgElem3);
+        }
         let imgElem4;
-          for (let i = 0; i < sceneInfo[4].values.videoImageCount; i++) {
-            imgElem4 = new Image();
-            imgElem4.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/5-/color-change_${25 + i}.jpg`;
-            sceneInfo[4].objs.videoImages.push(imgElem4);
-          }
+        for (let i = 0; i < sceneInfo[4].values.videoImageCount; i++) {
+          imgElem4 = new Image();
+          imgElem4.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/5-/color-change_${25 + i}.jpg`;
+          sceneInfo[4].objs.videoImages.push(imgElem4);
+        }
         let imgElem5;
-          for (let i = 0; i < sceneInfo[6].objs.imagesPath.length; i++) {
-            imgElem5 = new Image();
-            imgElem5.src = sceneInfo[6].objs.imagesPath[i];
-            sceneInfo[6].objs.images.push(imgElem5);
-          }
+        for (let i = 0; i < sceneInfo[6].objs.imagesPath.length; i++) {
+          imgElem5 = new Image();
+          imgElem5.src = sceneInfo[6].objs.imagesPath[i];
+          sceneInfo[6].objs.images.push(imgElem5);
+        }
         let imgElem6;
-          for (let i = 0; i < sceneInfo[7].values.videoImageCount; i++) {
-            imgElem6 = new Image();
-            imgElem6.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/5/12f/%235_12f_${1 + i}.jpg`;
-            sceneInfo[7].objs.videoImages.push(imgElem6);
-          }
+        for (let i = 0; i < sceneInfo[7].values.videoImageCount; i++) {
+          imgElem6 = new Image();
+          imgElem6.src = `https://framebystore.cafe24.com/sujin_code_test/ID%20BY/5/12f/%235_12f_${1 + i}.jpg`;
+          sceneInfo[7].objs.videoImages.push(imgElem6);
+        }
       }
 
       function setLayout() {
-        // for (let i = 0; i < sceneInfo.length; i++) {
-        //   if (sceneInfo[i].type === 'sticky') {
-        //     sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-        //     sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
-        //   }
-        // }
         for (let i = 0; i < sceneInfo.length; i++) {
-            if (sceneInfo[i].type === 'sticky') {
-              sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-            } else {
-              sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight;
-            }
-            sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
+          if (sceneInfo[i].type === 'sticky') {
+            sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
+          } else {
+            sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight;
           }
+          sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
+        }
 
         yOffset = window.pageYOffset;
         let totalScrollHeight = 0;
@@ -1432,22 +1936,23 @@ color : #FF0000;
 
       function calcValues(values, currentYOffset) {
         let rv;
+        // 현재 씬(스크롤섹션)에서 스크롤된 범위를 비율로 구하기
         const scrollHeight = sceneInfo[currentScene].scrollHeight;
         const scrollRatio = currentYOffset / scrollHeight;
-        
+
         if (values.length === 3) {
+          // start ~ end 사이에 애니메이션 실행
           const partScrollStart = values[2].start * scrollHeight;
           const partScrollEnd = values[2].end * scrollHeight;
           const partScrollHeight = partScrollEnd - partScrollStart;
 
           if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
-            rv = (currentYOffset - partScrollStart) / partScrollHeight  * (values[1] - values[0]) + values[0];
+            rv = (currentYOffset - partScrollStart) / partScrollHeight * (values[1] - values[0]) + values[0];
           } else if (currentYOffset < partScrollStart) {
-            rv = values[0]; 
+            rv = values[0];
           } else if (currentYOffset > partScrollEnd) {
             rv = values[1];
           }
-
         } else {
           rv = scrollRatio * (values[1] - values[0]) + values[0];
         }
@@ -1462,7 +1967,7 @@ color : #FF0000;
         const scrollHeight = sceneInfo[currentScene].scrollHeight;
         const scrollRatio = currentYOffset / scrollHeight;
 
-        console.log (currentScene);
+        console.log(currentScene);
         switch (currentScene) {
           case 0:
             // console.log('0 paly');
@@ -1486,9 +1991,9 @@ color : #FF0000;
               objs.messageD.style.opacity = calcValues(values.messageD_opacity_out, currentYOffset);
               objs.messageE.style.opacity = calcValues(values.messageE_opacity_out, currentYOffset);
               objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-            } 
-            
-            
+            }
+
+
             break;
 
           case 1:
@@ -1497,10 +2002,10 @@ color : #FF0000;
             objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
 
             if (scrollRatio <= 0.5) {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-              } else {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-              }
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
+            } else {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
+            }
 
             if (scrollRatio <= 0.15) {
               //in
@@ -1537,46 +2042,46 @@ color : #FF0000;
             //   //out
             //   objs.messageJ.style.opacity = calcValues(values.messageJ_opacity_out, currentYOffset);
             // }
-            break; 
+            break;
 
           case 2:
-          break;
-          
-           case 3:
+            break;
+
+          case 3:
             // console.log('3 paly');
             let sequence3 = Math.round(calcValues(values.imageSequence, currentYOffset));
             objs.context.drawImage(objs.videoImages[sequence3], 0, 0);
 
             if (scrollRatio <= 0.5) {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-                objs.messageK.style.opacity = calcValues(values.messageK_opacity_in, currentYOffset);
-                objs.messageM.style.opacity = calcValues(values.messageM_opacity_in, currentYOffset);
-              } else {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-                objs.messageK.style.opacity = calcValues(values.messageK_opacity_out, currentYOffset);
-                objs.messageM.style.opacity = calcValues(values.messageM_opacity_out, currentYOffset);
-              }
-              
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
+              objs.messageK.style.opacity = calcValues(values.messageK_opacity_in, currentYOffset);
+              objs.messageM.style.opacity = calcValues(values.messageM_opacity_in, currentYOffset);
+            } else {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
+              objs.messageK.style.opacity = calcValues(values.messageK_opacity_out, currentYOffset);
+              objs.messageM.style.opacity = calcValues(values.messageM_opacity_out, currentYOffset);
+            }
+
             break;
 
-            case 4:
+          case 4:
             // console.log('4 paly');
             let sequence4 = Math.round(calcValues(values.imageSequence, currentYOffset));
             objs.context.drawImage(objs.videoImages[sequence4], 0, 0);
 
             if (scrollRatio <= 0.5) {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-                objs.messageO.style.opacity = calcValues(values.messageO_opacity_in, currentYOffset);
-              } else {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-                objs.messageO.style.opacity = calcValues(values.messageO_opacity_out, currentYOffset);
-              }
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
+              objs.messageO.style.opacity = calcValues(values.messageO_opacity_in, currentYOffset);
+            } else {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
+              objs.messageO.style.opacity = calcValues(values.messageO_opacity_out, currentYOffset);
+            }
 
- 
-       
+
+
             break;
 
-            case 5:
+          case 5:
             // 다음 이미지 미리 그려주기
             if (scrollRatio > 0.92) {
               const objs = sceneInfo[6].objs;
@@ -1594,7 +2099,7 @@ color : #FF0000;
 
               objs.canvas.style.transform = `scale(${canvasScaleRatio})`;
               objs.context.drawImage(objs.images[0], 0, 0);
-              }
+            }
             break;
           case 6:
             // console.log('6 paly');
@@ -1649,65 +2154,65 @@ color : #FF0000;
               objs.canvas.height
             );
 
-          if (scrollRatio < values.rect1X[2].end) {
-                step = 1;
-                // console.log('캔버스 닿기 전');
-                objs.canvas.classList.remove('sticky'); 
-              } else {
-                step = 2;
-                // console.log('캔버스 닿은 후');
-                //이미지 블랜드
-                // console.log('두번쨰사진');
-                objs.canvas.classList.add('sticky');
-                objs.canvas.style.top = `${-(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2}px`;
-                objs.canvas.style.marginTop = 0;
-                
-                values.blendHeight[0] = 0;
-                values.blendHeight[1] = objs.canvas.height;
-                values.blendHeight[2].start = values.rect1X[2].end;
-                values.blendHeight[2].end = values.blendHeight[2].start + 0.3;
-                const blendHeight = calcValues(values.blendHeight, currentYOffset);
+            if (scrollRatio < values.rect1X[2].end) {
+              step = 1;
+              // console.log('캔버스 닿기 전');
+              objs.canvas.classList.remove('sticky');
+            } else {
+              step = 2;
+              // console.log('캔버스 닿은 후');
+              //이미지 블랜드
+              // console.log('두번쨰사진');
+              objs.canvas.classList.add('sticky');
+              objs.canvas.style.top = `${-(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2}px`;
+              objs.canvas.style.marginTop = 0;
 
-                objs.context.drawImage(objs.images[1],
-                  0, objs.canvas.height - blendHeight, objs.canvas.width, blendHeight,
-                  0, objs.canvas.height - blendHeight, objs.canvas.width, blendHeight);
+              values.blendHeight[0] = 0;
+              values.blendHeight[1] = objs.canvas.height;
+              values.blendHeight[2].start = values.rect1X[2].end;
+              values.blendHeight[2].end = values.blendHeight[2].start + 0.3;
+              const blendHeight = calcValues(values.blendHeight, currentYOffset);
+
+              objs.context.drawImage(objs.images[1],
+                0, objs.canvas.height - blendHeight, objs.canvas.width, blendHeight,
+                0, objs.canvas.height - blendHeight, objs.canvas.width, blendHeight);
 
 
-                  values.blendHeight2[0] = 0;
-                  values.blendHeight2[1] = objs.canvas.height;
-                  values.blendHeight2[2].start = values.blendHeight[2].end;
-                  values.blendHeight2[2].end = values.blendHeight2[2].start + 0.3;
-                  const blendHeight2 = calcValues(values.blendHeight2, currentYOffset);
+              values.blendHeight2[0] = 0;
+              values.blendHeight2[1] = objs.canvas.height;
+              values.blendHeight2[2].start = values.blendHeight[2].end;
+              values.blendHeight2[2].end = values.blendHeight2[2].start + 0.3;
+              const blendHeight2 = calcValues(values.blendHeight2, currentYOffset);
 
-                  objs.context.drawImage(objs.images[2],
-                    0, objs.canvas.height - blendHeight2, objs.canvas.width, blendHeight2,
-                    0, objs.canvas.height - blendHeight2, objs.canvas.width, blendHeight2);
- 
+              objs.context.drawImage(objs.images[2],
+                0, objs.canvas.height - blendHeight2, objs.canvas.width, blendHeight2,
+                0, objs.canvas.height - blendHeight2, objs.canvas.width, blendHeight2);
 
-                if (scrollRatio > values.blendHeight2[2].end && values.blendHeight2[2].end > 0) {            
-                  objs.canvas.classList.remove('sticky');
-                  objs.canvas.style.marginTop = `${scrollHeight * 0.6 }px`;
-                }
+
+              if (scrollRatio > values.blendHeight2[2].end && values.blendHeight2[2].end > 0) {
+                objs.canvas.classList.remove('sticky');
+                objs.canvas.style.marginTop = `${scrollHeight * 0.6}px`;
               }
+            }
 
-              break;
+            break;
 
-              case 7:
+          case 7:
             // console.log('7 paly');
             let sequence5 = Math.round(calcValues(values.imageSequence, currentYOffset));
             objs.context.drawImage(objs.videoImages[sequence5], 0, 0);
 
             if (scrollRatio <= 0.5) {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-                objs.messageS.style.opacity = calcValues(values.messageS_opacity_in, currentYOffset);
-                objs.messageT.style.opacity = calcValues(values.messageT_opacity_in, currentYOffset);
-              } else {
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-                objs.messageS.style.opacity = calcValues(values.messageS_opacity_out, currentYOffset);
-                objs.messageT.style.opacity = calcValues(values.messageT_opacity_out, currentYOffset);
-              }
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
+              objs.messageS.style.opacity = calcValues(values.messageS_opacity_in, currentYOffset);
+              objs.messageT.style.opacity = calcValues(values.messageT_opacity_in, currentYOffset);
+            } else {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
+              objs.messageS.style.opacity = calcValues(values.messageS_opacity_out, currentYOffset);
+              objs.messageT.style.opacity = calcValues(values.messageT_opacity_out, currentYOffset);
+            }
 
-      
+
 
             break;
         }
@@ -1720,13 +2225,13 @@ color : #FF0000;
         for (let i = 0; i < currentScene; i++) {
           prevScrollHeight += sceneInfo[i].scrollHeight;
         }
-        if (yOffset < prevScrollHeight) {
+        if (0 < prevScrollHeight) {
           document.body.classList.add('scroll-effect-end');
         }
-        if (yOffset > prevScrollHeight && yOffset < prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+        if (delayedYOffset > prevScrollHeight && yOffset < prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
           document.body.classList.remove('scroll-effect-end');
         }
-        if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+        if (delayedYOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
           enterNewScene = true;
           if (currentScene === sceneInfo.length - 1) {
             document.body.classList.add('scroll-effect-end');
@@ -1737,7 +2242,7 @@ color : #FF0000;
           document.body.setAttribute('id', `show-scene-${currentScene}`);
         }
 
-        if (yOffset < prevScrollHeight) {
+        if (delayedYOffset < prevScrollHeight) {
           enterNewScene = true;
           if (currentScene === 0) return;
           currentScene--;
@@ -1749,47 +2254,69 @@ color : #FF0000;
         playAnimation();
       }
 
+      function loop() {
+        delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
 
+        if (!enterNewScene) {
+          if (currentScene === 0 || currentScene === 1 || currentScene === 3 || currentScene === 4 || currentScene === 7) {
+            const currentYOffset = delayedYOffset - prevScrollHeight;
+            const objs = sceneInfo[currentScene].objs;
+            const values = sceneInfo[currentScene].values;
+            let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
+            if (objs.videoImages[sequence]) {
+              objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+            }
+          }
+        }
+
+        rafId = requestAnimationFrame(loop);
+
+        if (Math.abs(yOffset - delayedYOffset) < 1) {
+          cancelAnimationFrame(rafId);
+          rafState = false;
+        }
+      }
 
       window.addEventListener('load', () => {
         setLayout();
         sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
 
         window.addEventListener('scroll', () => {
-        yOffset = window.pageYOffset;
-        scrollLoop();
-       });
+          yOffset = window.pageYOffset;
+          scrollLoop();
+        });
 
-      // window.addEventListener('resize', () => {
-      //   if (window.innerWidth > 900) {
-      //     window.location.reload();
-      //     // setLayout();
-      //     // sceneInfo[3].values.rectStartY = 0;
-      //   }
-      //  });
-      //  window.addEventListener('orientationchange', setLAyout);
+        // window.addEventListener('resize', () => {
+        //   if (window.innerWidth > 900) {
+        //     window.location.reload();
+        //     // setLayout();
+        //     // sceneInfo[3].values.rectStartY = 0;
+        //   }
+        //  });
+        //  window.addEventListener('orientationchange', setLAyout);
       });
       setCanvasImages();
     })();
 
     //로고 사진 사이즈 조절
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-    $('#fileInput').change(function(evt) {    //evt : event 축약어
+      $('#fileInput').change(function (evt) {    //evt : event 축약어
 
         var files = evt.target.files;
         var file = files[0];
 
         if (file) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('logo').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById('logo').src = e.target.result;
+          };
+          reader.readAsDataURL(file);
         }
-    });
+      });
     });
   </script>
 
 </body>
+
 </html>
