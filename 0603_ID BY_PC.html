@@ -192,7 +192,7 @@ a {
 .scroll-section {
   position: relative;
   padding-top: 0vh;
-  /* border: 1px solid rgb(255, 196, 0); */
+  /* border: 1px solid rgb(255, 0, 0); */
 }
 
 #scroll-section-0 h1 {
@@ -217,6 +217,10 @@ a {
   align-items: center;
 }
 
+#scroll-section-7 {
+  padding-top: 10vh;
+}
+
 .normal-text {
   text-align: center;
   line-height: 1.2;
@@ -225,7 +229,6 @@ a {
   font-size: 1.5rem !important;
   display: inline-block;
 }
-
 
 .main-message.a {
   display: flex;
@@ -2444,7 +2447,7 @@ button:hover {
           values: {
             videoImageCount: 96,
             imageSequence: [0, 95],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             canvas_opacity_out: [1, 0, { start: 0.85, end: 0.95 }],
             messageS_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             messageS_opacity_out: [1, 0, { start: 0.35, end: 0.45 }],
@@ -2845,10 +2848,9 @@ button:hover {
             let sequence5 = Math.round(calcValues(values.imageSequence, currentYOffset));
             // objs.context.drawImage(objs.videoImages[sequence5], 0, 0);
 
-            objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-            objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-
+           
             if (scrollRatio <= 0.22) {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
               objs.messageS.style.opacity = calcValues(values.messageS_opacity_in, currentYOffset);
             } else {
               objs.messageS.style.opacity = calcValues(values.messageS_opacity_out, currentYOffset);
@@ -2857,10 +2859,8 @@ button:hover {
               objs.messageT.style.opacity = calcValues(values.messageT_opacity_in, currentYOffset);
             } else {
               objs.messageT.style.opacity = calcValues(values.messageT_opacity_out, currentYOffset);
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
             }
-
-
-
             break;
         }
       }
