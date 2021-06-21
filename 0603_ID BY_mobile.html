@@ -197,7 +197,7 @@
     .scroll-section {
       position: relative;
       padding-top: 0vh;
-      /* border: 1px solid rgb(251, 255, 0); */
+      /* border: 1px solid rgb(255, 0, 0); */
     }
 
     #scroll-section-0 h1 {
@@ -220,6 +220,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    #scroll-section-7 {
+      padding-top: 10vh;
     }
 
     .normal-text {
@@ -645,7 +649,7 @@
 
     .specification-text {
       font-size: 40px;
-      margin: 0 20px;
+      /* margin: 0 20px; */
     }
 
     .specification-sub {
@@ -2493,7 +2497,7 @@
             imageSequence: [0, 95],
             // videoImageCount: 2,
             // imageSequence: [0, 1],
-            canvas_opacity_in: [0, 1, { start: 0.01, end: 0.1 }],
+            canvas_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             canvas_opacity_out: [1, 0, { start: 0.85, end: 0.95 }],
             messageS_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
             messageS_opacity_out: [1, 0, { start: 0.35, end: 0.45 }],
@@ -2833,10 +2837,9 @@
             let sequence5 = Math.round(calcValues(values.imageSequence, currentYOffset));
             // objs.context.drawImage(objs.videoImages[sequence5], 0, 0);
 
-            objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-            objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
             
             if (scrollRatio <= 0.22) {
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
               objs.messageS.style.opacity = calcValues(values.messageS_opacity_in, currentYOffset);
             } else {
               objs.messageS.style.opacity = calcValues(values.messageS_opacity_out, currentYOffset);
@@ -2845,10 +2848,8 @@
               objs.messageT.style.opacity = calcValues(values.messageT_opacity_in, currentYOffset);
             } else {
               objs.messageT.style.opacity = calcValues(values.messageT_opacity_out, currentYOffset);
+              objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
             }
-
-
-
             break;
         }
       }
