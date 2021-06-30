@@ -1584,12 +1584,11 @@
 
   <div style="height: 100px;">
   </div>
+
   <script>
     $(document).ready(function () {
       document.body.classList.add('scroll-effect-end');
     });
-
-
     // document.getElementById('vid').play();
 
     document.getElementById('A').style.color = "#ffffff";
@@ -2871,9 +2870,11 @@
         }
         if (0 < prevScrollHeight) {
           document.body.classList.add('scroll-effect-end');
+          document.body.setAttribute('id', 'layout');
         }
         if (delayedYOffset > prevScrollHeight && yOffset < prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
           document.body.classList.remove('scroll-effect-end');
+          document.body.setAttribute('id', `show-scene-${currentScene}`);
         }
         if (delayedYOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
           enterNewScene = true;
