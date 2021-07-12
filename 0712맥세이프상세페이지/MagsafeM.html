@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .img100 img{
+            width: 100%;
+        }
+
+        #result {
+            font-weight: normal;
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .custom-section {
+            position: relative;
+            max-width: 250px;
+            height: 420px;
+            margin-top: 100px;
+            z-index: 5;
+            margin: 0 auto;
+        }
+
+        .Casebutton,
+        .Cardbutton {
+            border: solid 1px black;
+            border-radius: 10px;
+            padding: 0px 15px;
+            bottom: 0;
+            vertical-align: bottom;
+            letter-spacing: -1px;
+        }
+
+        .Magsafebutton {
+            border: solid 1px #2255b0;
+            background-color: #2255b0;
+            border-radius: 10px;
+            padding: 0px 5px;
+            margin: 0 20px;
+            letter-spacing: -1px;
+            color: white;
+        }
+
+        #phone-section1,
+        #phonecase-section1,
+        #MagsafeCase-section1,
+        #Card-section1,
+        #CardFrame-section1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #Case-Section {
+            width: 300px;
+            height: 110px;
+            overflow-x: auto;
+            margin: 20px auto 0;
+            display: none;
+            text-align: center;
+        }
+
+        #Case-Section button {
+            width: 46px;
+            height: 46px;
+            padding: 3px;
+            margin: 0 4px 8px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+        }
+
+        .CardFrame-section {
+            z-index: 10;
+        }
+
+        #Magsafe-Section {
+            width: 300px;
+            overflow-x: auto;
+            margin: 20px auto 0;
+            text-align: center;
+        }
+
+        #Magsafe-Section button {
+            width: 40px;
+            height: 40px;
+            padding: 3px;
+            margin: 0 2px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+        }
+
+        #Card-Section {
+            width: 300px;
+            height: 130px;
+            overflow-x: auto;
+            margin: 20px auto 0;
+            display: none;
+            text-align: center;
+        }
+
+        #Card-Section button {
+            width: 60px;
+            height: 35px;
+            padding: 0 1px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: white;
+        }
+
+        .Card-button {
+            position: relative;
+            display: inline-block;
+            width: 58px;
+            height: 34px;
+            top: -5px;
+        }
+
+        #fileInput,
+        .input-file-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 57px;
+            height: 34px;
+        }
+
+        .input-file-button {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 9px;
+        }
+
+        #card {
+            position: absolute;
+            width: auto !important;
+            top: 52%;
+            left: 50%;
+            height: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .cardposition {
+            position: absolute;
+            width: 250px;
+            height: 428.56px;
+            display: block;
+        }
+
+        #change-display {
+            position: relative;
+        }
+
+        .description {
+          font-size: 0.8rem;
+          text-align: center;
+        }
+
+        #custom-studio {
+          height: 750px;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="img100"><img  src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/1.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/2.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/3.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/4.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/5.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/6.jpg"></div>
+
+    <section id="custom-studio">
+        <p style="font-size: 8vw; font-weight: bold; letter-spacing: -1px; text-align: center;">Custom Studio</p>
+        <div class="custom-section">
+            <!-- 핸드폰 -->
+            <img id="phone-section1"
+                src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/iphone.jpg">
+            <!-- 핸드폰 케이스 -->
+            <img id="phonecase-section1"
+                src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png">
+            <!-- 맥세이프 케이스 -->
+            <img id="MagsafeCase-section1"
+                src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png">
+            <!-- 카드 -->
+            <img id="Card-section1"
+                src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png">
+
+            <!-- 맥세이프 카드 프레임 -->
+            <img id="CardFrame-section1" class="CardFrame-section"
+                src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png">
+        </div>
+
+        <div style="margin-top: 10px; text-align: center;">
+            <button id="Casebutton" class="Casebutton">Magsafe<br>Case</button>
+            <button id="Magsafebutton" class="Magsafebutton">Magsafe<br>Frame Case</button>
+            <button id="Cardbutton" class="Cardbutton">Credit<br>Card</button>
+        </div>
+        <div id="change-display">
+            <!-- 버튼 누르면 바뀌는 부분 -->
+            <div id="Case-Section">
+                <button id="case-colourblank"><img
+                  src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colourblank1_btn.png"></button>
+                <button id="case-colour00"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour0_btn.png"></button>
+                <button id="case-colour0"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour0_btn.png"></button>
+                <button id="case-colour1"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour1_btn.png"></button>
+                <button id="case-colour2"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour2_btn.png"></button>
+                <button id="case-colour3"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour3_btn.png"></button>
+                <button id="case-colour4"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour4_btn.png"></button>
+                <button id="case-colour5"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour5_btn.png"></button>
+                <button id="case-colour6"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour6_btn.png"></button>
+                <button id="case-colour7"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour7_btn.png"></button>
+                <button id="case-colour8"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour8_btn.png"></button>
+                <button id="case-colour9"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour9_btn.png"></button>
+                <button id="case-colour10"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour10_btn.png"></button>
+                <button id="case-colour11"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour11_btn.png"></button>
+                <button id="case-colour12"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour12_btn.png"></button>
+                <button id="case-colour13"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour13_btn.png"></button>
+                <button id="case-colour14"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour14_btn.png"></button>
+                <button id="case-colour15"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour15_btn.png"></button>
+                <button id="case-colour16"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour16_btn.png"></button>
+                <button id="case-colour17"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour17_btn.png"></button>
+                <button id="case-colour18"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour18_btn.png"></button>
+                <button id="case-colour19"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour19_btn.png"></button>
+                <button id="case-colour20"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour20_btn.png"></button>
+                <button id="case-colour21"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour21_btn.png"></button>
+            </div>
+
+            <div id="Magsafe-Section">
+                <button type="button" id="Magsafe-colourblank">
+                  <img style="vertical-align: baseline;" src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/magsafeblank.png">
+                </button>
+                </button>
+                <button type="button" class="Black" id="Magsafe-colour1" value="Black"
+                    style="background: linear-gradient(180deg, #222222 50%, #181818 50%); background-clip: content-box;">
+                </button>
+                <button type="button" class="SeaBlue" id="Magsafe-colour2" value="SeaBlue"
+                    style="background: linear-gradient(180deg, #344d64 50%, #203b59 50%); background-clip: content-box;">
+                </button>
+                <button type="button" class="ButterMilk" id="Magsafe-colour3" value="ButterMilk"
+                    style="background: linear-gradient(180deg, #ededeb 50%, #c8c7c3 50%); background-clip: content-box;">
+                </button>
+                <button type="button" class="White" id="Magsafe-colour4" value="White"
+                    style="background: linear-gradient(180deg, #f5f6f8 50%, #b7b7b7 50%); background-clip: content-box;">
+                </button>
+                <button type="button" class="Air" id="Magsafe-colour5" value="Air"
+                    style="background: linear-gradient(180deg, #f9f9f9 50%, #e0e2e1 50%); background-clip: content-box;">
+                </button>
+                <br>
+                <span id='result'></span>
+            </div>
+
+
+            <div id="Card-Section">
+                <button id="card-colour0"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcropblank.jpg"></button>
+                <button id="card-colour1"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop1.jpg"></button>
+                <button id="card-colour2"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop2.jpg"></button>
+                <button id="card-colour3"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop3.jpg"></button>
+                <button id="card-colour4"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop4.jpg"></button>
+                <button id="card-colour5"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop5.jpg"></button>
+                <button id="card-colour6"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop6.jpg"></button>
+                <button id="card-colour7"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop7.jpg"></button>
+                <button id="card-colour8"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop8.jpg"></button>
+                <button id="card-colour9"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop9.jpg"></button>
+                <button id="card-colour10"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop10.jpg"></button>
+                <button id="card-colour11"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop11.jpg"></button>
+                <button id="card-colour12"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop12.jpg"></button>
+                <button id="card-colour13"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop13.jpg"></button>
+                <button id="card-colour14"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop14.jpg"></button>
+                <button id="card-colour15"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop15.jpg"></button>
+                <button id="card-colour16"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop16.jpg"></button>
+                <button id="card-colour17"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop17.jpg"></button>
+                <button id="card-colour18"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop18.jpg"></button>
+                <button id="card-colour19"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop19.jpg"></button>
+                <button id="card-colour20"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop20.jpg"></button>
+                <button id="card-colour21"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop21.jpg"></button>
+                <button id="card-colour22"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop22.jpg"></button>
+                <button id="card-colour23"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop23.jpg"></button>
+                <button id="card-colour24"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop24.jpg"></button>
+                <button id="card-colour25"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop25.jpg"></button>
+                <button id="card-colour26"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop26.jpg"></button>
+                <button id="card-colour27"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop27.jpg"></button>
+                <button id="card-colour28"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop28.jpg"></button>
+                <button id="card-colour29"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop29.jpg"></button>
+                <button id="card-colour30"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop30.jpg"></button>
+                <button id="card-colour31"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop31.jpg"></button>
+                <button id="card-colour32"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop32.jpg"></button>
+                <button id="card-colour33"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop33.jpg"></button>
+                <button id="card-colour34"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop34.jpg"></button>
+                <button id="card-colour35"><img
+                        src="https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/cardcrop/cardcrop35.jpg"></button>
+            </div>
+
+        </div>
+    </section>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/7.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/8.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/9.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/10.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/11.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/12.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/13.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/14.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/15.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/16_1.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/17_1.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/18_1.jpg"></div>
+    <div class="img100"><img src="https://framebystore.cafe24.com/product-detail/forMagsafe/mobile/19.jpg"></div>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script>
+          $(function() {
+              $(window).scroll(function() {
+                  if ($(this).scrollTop() >= Math.ceil($('.scroll.1').offset().top)) {
+                    document.getElementById('vid1').play();
+                  } if ($(this).scrollTop() >= Math.ceil($('.scroll.2').offset().top)) {
+                    document.getElementById('vid2').play();
+                  } if ($(this).scrollTop() >= Math.ceil($('.scroll.3').offset().top)) {
+                    document.getElementById('vid3').play();
+                  }
+              });
+          });
+
+          function playvid() {
+            document.getElementById('vid').play();
+          }
+          function playvid1() {
+            document.getElementById('vid1').play();
+          }
+          function playvid2() {
+            document.getElementById('vid2').play();
+          }
+          function playvid3() {
+            document.getElementById('vid3').play();
+          }
+
+            document.getElementById('Casebutton').onclick = function () { Casebutton() };
+            function Casebutton() {
+              document.getElementById('Casebutton').style.backgroundColor = "#2255b0";
+              document.getElementById('Casebutton').style.border = "solid 1px #2255b0";
+              document.getElementById('Casebutton').style.color = "white";
+              document.getElementById('Magsafebutton').style.backgroundColor = "white";
+              document.getElementById('Magsafebutton').style.border = "solid 1px black";
+              document.getElementById('Magsafebutton').style.color = "black";
+              document.getElementById('Cardbutton').style.backgroundColor = "white";
+              document.getElementById('Cardbutton').style.border = "solid 1px black";
+              document.getElementById('Cardbutton').style.color = "black";
+              document.getElementById('Case-Section').style.display = "block";
+              document.getElementById('Magsafe-Section').style.display = "none";
+              document.getElementById('Card-Section').style.display = "none";
+            };
+        
+            document.getElementById('Magsafebutton').onclick = function () { Magsafebutton() };
+            function Magsafebutton() {
+              document.getElementById('Casebutton').style.backgroundColor = "white";
+              document.getElementById('Casebutton').style.border = "solid 1px black";
+              document.getElementById('Casebutton').style.color = "black";
+              document.getElementById('Magsafebutton').style.backgroundColor = "#2255b0";
+              document.getElementById('Magsafebutton').style.border = "solid 1px #2255b0";
+              document.getElementById('Magsafebutton').style.color = "white";
+              document.getElementById('Cardbutton').style.backgroundColor = "white";
+              document.getElementById('Cardbutton').style.border = "solid 1px black";
+              document.getElementById('Cardbutton').style.color = "black";
+              document.getElementById('Case-Section').style.display = "none";
+              document.getElementById('Magsafe-Section').style.display = "block";
+              document.getElementById('Card-Section').style.display = "none";
+            };
+        
+            document.getElementById('Cardbutton').onclick = function () { Cardbutton() };
+            function Cardbutton() {
+              document.getElementById('Casebutton').style.backgroundColor = "white";
+              document.getElementById('Casebutton').style.border = "solid 1px black";
+              document.getElementById('Casebutton').style.color = "black";
+              document.getElementById('Magsafebutton').style.backgroundColor = "white";
+              document.getElementById('Magsafebutton').style.border = "solid 1px black";
+              document.getElementById('Magsafebutton').style.color = "black";
+              document.getElementById('Cardbutton').style.backgroundColor = "#2255b0";
+              document.getElementById('Cardbutton').style.border = "solid 1px #2255b0";
+              document.getElementById('Cardbutton').style.color = "white";
+              document.getElementById('Case-Section').style.display = "none";
+              document.getElementById('Magsafe-Section').style.display = "none";
+              document.getElementById('Card-Section').style.display = "block";
+            };
+
+            document.getElementById('case-colourblank').onclick = function () { casecolourblank() };
+            function casecolourblank() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/iphone.jpg";
+              document.getElementById('case-colourblank').style.border = "3px solid #2255b0";
+              document.getElementById('case-colourblank').style.borderRadius = "50%";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+
+            document.getElementById('case-colour00').onclick = function () { casecolour00() };
+            function casecolour00() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour0_frameby.png";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour00').style.borderRadius = "50%";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour0').onclick = function () { casecolour0() };
+            function casecolour0() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour0_apple.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour0').style.borderRadius = "50%";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour1').onclick = function () { casecolour1() };
+            function casecolour1() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour1.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour1').style.borderRadius = "50%";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour2').onclick = function () { casecolour2() };
+            function casecolour2() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour2.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour2').style.borderRadius = "50%";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour3').onclick = function () { casecolour3() };
+            function casecolour3() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour3.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour3').style.borderRadius = "50%";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour4').onclick = function () { casecolour4() };
+            function casecolour4() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour4.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour4').style.borderRadius = "50%";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour5').onclick = function () { casecolour5() };
+            function casecolour5() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour5.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour5').style.borderRadius = "50%";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour6').onclick = function () { casecolour6() };
+            function casecolour6() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour6.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour6').style.borderRadius = "50%";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour7').onclick = function () { casecolour7() };
+            function casecolour7() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour7.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour7').style.borderRadius = "50%";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour8').onclick = function () { casecolour8() };
+            function casecolour8() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour8.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour8').style.borderRadius = "50%";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour9').onclick = function () { casecolour9() };
+            function casecolour9() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour9.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour9').style.borderRadius = "50%";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour10').onclick = function () { casecolour10() };
+            function casecolour10() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour10.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour10').style.borderRadius = "50%";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour11').onclick = function () { casecolour11() };
+            function casecolour11() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour11.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour11').style.borderRadius = "50%";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour12').onclick = function () { casecolour12() };
+            function casecolour12() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour12.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour12').style.borderRadius = "50%";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour13').onclick = function () { casecolour13() };
+            function casecolour13() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour13.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour13').style.borderRadius = "50%";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour14').onclick = function () { casecolour14() };
+            function casecolour14() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour14.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour14').style.borderRadius = "50%";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour15').onclick = function () { casecolour15() };
+            function casecolour15() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour15.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour15').style.borderRadius = "50%";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour16').onclick = function () { casecolour16() };
+            function casecolour16() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour16.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour16').style.borderRadius = "50%";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour17').onclick = function () { casecolour17() };
+            function casecolour17() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour17.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour17').style.borderRadius = "50%";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour18').onclick = function () { casecolour18() };
+            function casecolour18() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour18.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour18').style.borderRadius = "50%";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour19').onclick = function () { casecolour19() };
+            function casecolour19() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour19.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour19').style.borderRadius = "50%";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour20').onclick = function () { casecolour20() };
+            function casecolour20() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour20.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour20').style.borderRadius = "50%";
+              document.getElementById('case-colour21').style.border = "0";
+            };
+        
+            document.getElementById('case-colour21').onclick = function () { casecolour21() };
+            function casecolour21() {
+              document.getElementById('phonecase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/case/colour21.jpg";
+              document.getElementById('case-colourblank').style.border = "0";
+              document.getElementById('case-colour00').style.border = "0";
+              document.getElementById('case-colour0').style.border = "0";
+              document.getElementById('case-colour1').style.border = "0";
+              document.getElementById('case-colour2').style.border = "0";
+              document.getElementById('case-colour3').style.border = "0";
+              document.getElementById('case-colour4').style.border = "0";
+              document.getElementById('case-colour5').style.border = "0";
+              document.getElementById('case-colour6').style.border = "0";
+              document.getElementById('case-colour7').style.border = "0";
+              document.getElementById('case-colour8').style.border = "0";
+              document.getElementById('case-colour9').style.border = "0";
+              document.getElementById('case-colour10').style.border = "0";
+              document.getElementById('case-colour11').style.border = "0";
+              document.getElementById('case-colour12').style.border = "0";
+              document.getElementById('case-colour13').style.border = "0";
+              document.getElementById('case-colour14').style.border = "0";
+              document.getElementById('case-colour15').style.border = "0";
+              document.getElementById('case-colour16').style.border = "0";
+              document.getElementById('case-colour17').style.border = "0";
+              document.getElementById('case-colour18').style.border = "0";
+              document.getElementById('case-colour19').style.border = "0";
+              document.getElementById('case-colour20').style.border = "0";
+              document.getElementById('case-colour21').style.border = "3px solid #2255b0";
+              document.getElementById('case-colour21').style.borderRadius = "50%";
+            };
+        
+        
+            $("#Magsafe-colourblank").click(function() {
+              document.getElementById('result').style.display = "none";
+            });
+            $("#Magsafe-colour1").click(function() {
+              document.getElementById('result').style.display = "block";
+                var Magsafecolour = $(this).val();
+                document.getElementById("result").innerText = Magsafecolour;
+            });
+            $("#Magsafe-colour2").click(function() {
+              document.getElementById('result').style.display = "block";
+                var Magsafecolour = $(this).val();
+                document.getElementById("result").innerText = Magsafecolour;
+            });
+            $("#Magsafe-colour3").click(function() {
+              document.getElementById('result').style.display = "block";
+                var Magsafecolour = $(this).val();
+                document.getElementById("result").innerText = Magsafecolour;
+            });
+            $("#Magsafe-colour4").click(function() {
+              document.getElementById('result').style.display = "block";
+                var Magsafecolour = $(this).val();
+                document.getElementById("result").innerText = Magsafecolour;
+            });
+            $("#Magsafe-colour5").click(function() {
+              document.getElementById('result').style.display = "block";
+                var Magsafecolour = $(this).val();
+                document.getElementById("result").innerText = Magsafecolour;
+            });
+
+            document.getElementById('Magsafe-colourblank').onclick = function () { Magsafecolourblank() };
+            function Magsafecolourblank() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png";
+              document.getElementById('Magsafe-colourblank').style.border = "3px solid #2255b0";
+              document.getElementById('Magsafe-colour1').style.border = "0";
+              document.getElementById('Magsafe-colour2').style.border = "0";
+              document.getElementById('Magsafe-colour3').style.border = "0";
+              document.getElementById('Magsafe-colour4').style.border = "0";
+              document.getElementById('Magsafe-colour5').style.border = "0";
+            };
+            document.getElementById('Magsafe-colour1').onclick = function () { Magsafecolour1() };
+            function Magsafecolour1() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardcase-Black.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardframe-Black.png";
+              document.getElementById('Magsafe-colourblank').style.border = "0";
+              document.getElementById('Magsafe-colour1').style.border = "3px solid #2255b0";
+              document.getElementById('Magsafe-colour2').style.border = "0";
+              document.getElementById('Magsafe-colour3').style.border = "0";
+              document.getElementById('Magsafe-colour4').style.border = "0";
+              document.getElementById('Magsafe-colour5').style.border = "0";
+            };
+        
+            document.getElementById('Magsafe-colour2').onclick = function () { Magsafecolour2() };
+            function Magsafecolour2() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardcase-SeaBlue.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardframe-SeaBlue.png";
+              document.getElementById('Magsafe-colourblank').style.border = "0";
+              document.getElementById('Magsafe-colour1').style.border = "0";
+              document.getElementById('Magsafe-colour2').style.border = "3px solid #2255b0";
+              document.getElementById('Magsafe-colour3').style.border = "0";
+              document.getElementById('Magsafe-colour4').style.border = "0";
+              document.getElementById('Magsafe-colour5').style.border = "0";
+            };
+        
+            document.getElementById('Magsafe-colour3').onclick = function () { Magsafecolour3() };
+            function Magsafecolour3() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardcase-ButterMilk.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardframe-ButterMilk.png";
+              document.getElementById('Magsafe-colourblank').style.border = "0";
+              document.getElementById('Magsafe-colour1').style.border = "0";
+              document.getElementById('Magsafe-colour2').style.border = "0";
+              document.getElementById('Magsafe-colour3').style.border = "3px solid #2255b0";
+              document.getElementById('Magsafe-colour4').style.border = "0";
+              document.getElementById('Magsafe-colour5').style.border = "0";
+            };
+        
+            document.getElementById('Magsafe-colour4').onclick = function () { Magsafecolour4() };
+            function Magsafecolour4() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardcase-White.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardframe-White.png";
+              document.getElementById('Magsafe-colourblank').style.border = "0";
+              document.getElementById('Magsafe-colour1').style.border = "0";
+              document.getElementById('Magsafe-colour2').style.border = "0";
+              document.getElementById('Magsafe-colour3').style.border = "0";
+              document.getElementById('Magsafe-colour4').style.border = "3px solid #2255b0";
+              document.getElementById('Magsafe-colour5').style.border = "0";
+            };
+        
+            document.getElementById('Magsafe-colour5').onclick = function () { Magsafecolour5() };
+            function Magsafecolour5() {
+              document.getElementById('MagsafeCase-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardcase-Air.png";
+              document.getElementById('CardFrame-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/Magsafe-cardframe-Air.png";
+              document.getElementById('Magsafe-colourblank').style.border = "0";
+              document.getElementById('Magsafe-colour1').style.border = "0";
+              document.getElementById('Magsafe-colour2').style.border = "0";
+              document.getElementById('Magsafe-colour3').style.border = "0";
+              document.getElementById('Magsafe-colour4').style.border = "0";
+              document.getElementById('Magsafe-colour5').style.border = "3px solid #2255b0";
+            };
+        
+            document.getElementById('card-colour0').onclick = function () { cardcolour0() };
+            function cardcolour0() {
+              $('#Card-section1').css('opacity', '0');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/basic/blank.png";
+            };
+        
+            document.getElementById('card-colour1').onclick = function () { cardcolour1() };
+            function cardcolour1() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card1.png";
+            };
+        
+            document.getElementById('card-colour2').onclick = function () { cardcolour2() };
+            function cardcolour2() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card2.png";
+            };
+        
+            document.getElementById('card-colour3').onclick = function () { cardcolour3() };
+            function cardcolour3() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card3.png";
+            };
+        
+            document.getElementById('card-colour4').onclick = function () { cardcolour4() };
+            function cardcolour4() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card4.png";
+            };
+        
+            document.getElementById('card-colour5').onclick = function () { cardcolour5() };
+            function cardcolour5() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card5.png";
+            };
+        
+            document.getElementById('card-colour6').onclick = function () { cardcolour6() };
+            function cardcolour6() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card6.png";
+            };
+        
+            document.getElementById('card-colour7').onclick = function () { cardcolour7() };
+            function cardcolour7() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card7.png";
+            };
+        
+            document.getElementById('card-colour8').onclick = function () { cardcolour8() };
+            function cardcolour8() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card8.png";
+            };
+        
+            document.getElementById('card-colour9').onclick = function () { cardcolour9() };
+            function cardcolour9() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card9.png";
+            };
+        
+            document.getElementById('card-colour10').onclick = function () { cardcolour10() };
+            function cardcolour10() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card10.png";
+            };
+        
+            document.getElementById('card-colour11').onclick = function () { cardcolour11() };
+            function cardcolour11() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card11.png";
+            };
+        
+            document.getElementById('card-colour12').onclick = function () { cardcolour12() };
+            function cardcolour12() {;
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card12.png";
+            };
+        
+            document.getElementById('card-colour13').onclick = function () { cardcolour13() };
+            function cardcolour13() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card13.png";
+            };
+        
+            document.getElementById('card-colour14').onclick = function () { cardcolour14() };
+            function cardcolour14() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card14.png";
+            };
+        
+            document.getElementById('card-colour15').onclick = function () { cardcolour15() };
+            function cardcolour15() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card15.png";
+            };
+        
+            document.getElementById('card-colour16').onclick = function () { cardcolour16() };
+            function cardcolour16() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card16.png";
+            };
+        
+            document.getElementById('card-colour17').onclick = function () { cardcolour17() };
+            function cardcolour17() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card17.png";
+            };
+        
+            document.getElementById('card-colour18').onclick = function () { cardcolour18() };
+            function cardcolour18() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card18.png";
+            };
+        
+            document.getElementById('card-colour19').onclick = function () { cardcolour19() };
+            function cardcolour19() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card19.png";
+            };
+        
+            document.getElementById('card-colour20').onclick = function () { cardcolour20() };
+            function cardcolour20() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card20.png";
+            };
+        
+            document.getElementById('card-colour21').onclick = function () { cardcolour21() };
+            function cardcolour21() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card21.png";
+            };
+        
+            document.getElementById('card-colour22').onclick = function () { cardcolour22() };
+            function cardcolour22() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card22.png";
+            };
+        
+            document.getElementById('card-colour23').onclick = function () { cardcolour23() };
+            function cardcolour23() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card23.png";
+            };
+        
+            document.getElementById('card-colour24').onclick = function () { cardcolour24() };
+            function cardcolour24() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card24.png";
+            };
+        
+            document.getElementById('card-colour25').onclick = function () { cardcolour25() };
+            function cardcolour25() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card25.png";
+            };
+        
+            document.getElementById('card-colour26').onclick = function () { cardcolour26() };
+            function cardcolour26() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card26.png";
+            };
+        
+            document.getElementById('card-colour27').onclick = function () { cardcolour27() };
+            function cardcolour27() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card27.png";
+            };
+        
+            document.getElementById('card-colour28').onclick = function () { cardcolour28() };
+            function cardcolour28() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card28.png";
+            };
+        
+            document.getElementById('card-colour29').onclick = function () { cardcolour29() };
+            function cardcolour29() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card29.png";
+            };
+        
+            document.getElementById('card-colour30').onclick = function () { cardcolour30() };
+            function cardcolour30() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card30.png";
+            };
+        
+            document.getElementById('card-colour31').onclick = function () { cardcolour31() };
+            function cardcolour31() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card31.png";
+            };
+        
+            document.getElementById('card-colour32').onclick = function () { cardcolour32() };
+            function cardcolour32() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card32.png";
+            };
+        
+            document.getElementById('card-colour33').onclick = function () { cardcolour33() };
+            function cardcolour33() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card33.png";
+            };
+        
+            document.getElementById('card-colour34').onclick = function () { cardcolour34() };
+            function cardcolour34() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card34.png";
+            };
+        
+            document.getElementById('card-colour35').onclick = function () { cardcolour35() };
+            function cardcolour35() {
+              $('#Card-section1').css('opacity', '1');
+              document.getElementById('Card-section1').src = "https://framebystore.cafe24.com/sujin_code_test/0629%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6/11/card/card35.png";
+            };
+        
+            document.getElementById('btn-text1').style.display = "inline-block";
+    document.getElementById('colour1').style.border = "3px solid #2255b0";
+
+    $(".formagsafe_btn").click(function() {
+      var formagsafe_btn = $(this).val();
+      document.getElementById("result").innerText = `-${formagsafe_btn}`;
+    });
+
+    document.getElementById('colour1').onclick = function () { colour1() };
+    function colour1() {
+      document.getElementById('change_img').src = "https://framebystore.cafe24.com/sujin_code_test/ForMacSafe/Air3.jpg";
+      document.getElementById('btn-text1').style.display = "inline-block";
+      document.getElementById('btn-text2').style.display = "none";
+      document.getElementById('btn-text3').style.display = "none";
+      document.getElementById('btn-text4').style.display = "none";
+      document.getElementById('btn-text5').style.display = "none";
+      document.getElementById('colour1').style.border = "3px solid #2255b0";
+      document.getElementById('colour2').style.border = "0";
+      document.getElementById('colour3').style.border = "0";
+      document.getElementById('colour4').style.border = "0";
+      document.getElementById('colour5').style.border = "0";
+    };
+
+    document.getElementById('colour2').onclick = function () { colour2() };
+    function colour2() {
+      document.getElementById('change_img').src = "https://framebystore.cafe24.com/sujin_code_test/ForMacSafe/White3.jpg";
+      document.getElementById('btn-text1').style.display = "none";
+      document.getElementById('btn-text2').style.display = "inline-block";
+      document.getElementById('btn-text3').style.display = "none";
+      document.getElementById('btn-text4').style.display = "none";
+      document.getElementById('btn-text5').style.display = "none";
+      document.getElementById('colour1').style.border = "0";
+      document.getElementById('colour2').style.border = "3px solid #2255b0";
+      document.getElementById('colour3').style.border = "0";
+      document.getElementById('colour4').style.border = "0";
+      document.getElementById('colour5').style.border = "0";
+    };
+    document.getElementById('colour3').onclick = function () { colour3() };
+    function colour3() {
+      document.getElementById('change_img').src = "https://framebystore.cafe24.com/sujin_code_test/ForMacSafe/ButterMilk3.jpg";
+      document.getElementById('btn-text1').style.display = "none";
+      document.getElementById('btn-text2').style.display = "none";
+      document.getElementById('btn-text3').style.display = "inline-block";
+      document.getElementById('btn-text4').style.display = "none";
+      document.getElementById('btn-text5').style.display = "none";
+      document.getElementById('colour1').style.border = "0";
+      document.getElementById('colour2').style.border = "0";
+      document.getElementById('colour3').style.border = "3px solid #2255b0";
+      document.getElementById('colour4').style.border = "0";
+      document.getElementById('colour5').style.border = "0";
+    };
+    document.getElementById('colour4').onclick = function () { colour4() };
+    function colour4() {
+      document.getElementById('change_img').src = "https://framebystore.cafe24.com/sujin_code_test/ForMacSafe/SeaBlue3.jpg";
+      document.getElementById('btn-text1').style.display = "none";
+      document.getElementById('btn-text2').style.display = "none";
+      document.getElementById('btn-text3').style.display = "none";
+      document.getElementById('btn-text4').style.display = "inline-block";
+      document.getElementById('btn-text5').style.display = "none";
+      document.getElementById('colour1').style.border = "0";
+      document.getElementById('colour2').style.border = "0";
+      document.getElementById('colour3').style.border = "0";
+      document.getElementById('colour4').style.border = "3px solid #2255b0";
+      document.getElementById('colour5').style.border = "0";
+    };
+    document.getElementById('colour5').onclick = function () { colour5() };
+    function colour5() {
+      document.getElementById('change_img').src = "https://framebystore.cafe24.com/sujin_code_test/ForMacSafe/Black3.jpg";
+      document.getElementById('btn-text1').style.display = "none";
+      document.getElementById('btn-text2').style.display = "none";
+      document.getElementById('btn-text3').style.display = "none";
+      document.getElementById('btn-text4').style.display = "none";
+      document.getElementById('btn-text5').style.display = "inline-block";
+      document.getElementById('colour1').style.border = "0";
+      document.getElementById('colour2').style.border = "0";
+      document.getElementById('colour3').style.border = "0";
+      document.getElementById('colour4').style.border = "0";
+      document.getElementById('colour5').style.border = "3px solid #2255b0";
+    };
+        
+          </script>
+</html>
